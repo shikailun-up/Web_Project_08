@@ -1,0 +1,1040 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<title>博物科学</title>
+		<style type="text/css">
+			*{
+				margin:0 auto;
+			}
+			#top1{
+				position: absolute;
+				margin-left: 388px;
+				margin-top:40px;
+				width:160px;
+				height:100px;
+			}
+			#top2{
+				position: absolute;
+				margin-left: 548px;
+				margin-top: 116px;
+				width:200px;
+			}
+			#top3{
+				position: absolute;
+				margin-top: 65px;
+				margin-left: 900px;
+				width:260px;
+			}
+			#caiDan{
+				position: absolute;
+				width:770px;
+				background-color: black;
+				height:45px;
+				margin-left: 388px;
+				margin-top: 145px;
+			}
+			#b1{
+				/*两个菜单之间的间距为16px*/
+				position: absolute;
+				height:45px;
+				margin-left: 0px;
+				background-color: rgb(2,178,181);
+				width:100px;
+				text-align: center;
+			}
+			#b2{
+				position: absolute;
+				height:45px;
+				margin-left: 116px;
+				width:95px;
+				background-color:black;
+				text-align: center;
+			}
+			#b3{
+				position: absolute;
+				height:45px;
+				margin-left: 227px;
+				width:95px;
+				background-color:black;
+				text-align: center;
+			}
+			#b4{
+				position: absolute;
+				height:45px;
+				margin-left: 338px;
+				width:95px;
+				background-color:black;
+				text-align: center;
+			}
+			#b5{
+				position: absolute;
+				height:45px;
+				margin-left: 449px;
+				width:95px;
+				background-color:black;
+				text-align: center;
+			}
+			#b6{
+				position: absolute;
+				height:45px;
+				margin-left: 562px;
+				width:95px;
+				background-color:black;
+				text-align: center;
+			}
+			#b7{
+				position: absolute;
+				height:45px;
+				margin-left: 675px;
+				width:95px;
+				background-color:black;
+				text-align: center;
+			}
+			p{
+				margin-top: 14px;
+				font-size: 13px;
+				color: #fff;
+			}
+			a{
+				text-decoration: none;
+			}
+			#b1:hover{
+				background-color:rgb(2,178,181) ;
+			}
+			#b2:hover{
+				background-color:rgb(2,178,181) ;
+			}
+			#b3:hover{
+				background-color:rgb(2,178,181) ;
+			}
+			#b4:hover{
+				background-color:rgb(2,178,181) ;
+			}
+			#b5:hover{
+				background-color:rgb(2,178,181) ;
+			}
+			#b6:hover{
+				background-color:rgb(2,178,181) ;
+			}
+			#b7:hover{
+				background-color:rgb(2,178,181) ;
+			}
+			.lb-box {
+				width: 60%;
+				height: 580px;
+				margin: 15px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			@media (max-width:568px) {
+			  	.lb-box {
+			    width: 76%;
+			    height: 220px;
+			  }
+			}
+			.lb-content {
+			  	width: 100%;  
+			  	height: 100%;
+			}
+			.lb-item {
+			  	width: 100%;  
+			  	height: 100%;
+			  	display: none;
+			  	position: relative;   
+			}
+			.lb-item > a {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+			.lb-item > a > img {
+			  	width: 100%;
+			  	height: 100%;
+			}
+			.lb-item > a > span {
+				width: 100%;
+				display: block;
+				position: absolute;
+				bottom: 0px;
+				padding: 15px;
+				color: #fff;
+				background-color: rgba(0,0,0,0.7);
+			}
+			@media (max-width:568px) {
+			    .lb-item > a > span {
+			    padding: 10px;
+			  }
+			}
+			.lb-item.active {
+			    display: block;
+			    left: 0%;
+			}
+			.lb-item.active.left {
+			    left: -100%;
+			}
+			.lb-item.active.right {
+			    left: 100%;
+			}
+			/*  */
+			.lb-item.next,.lb-item.prev {
+			    display: block;
+			    position: absolute;
+			    top: 0px;
+			}
+			.lb-item.next {
+			    left: 100%;
+			}
+			.lb-item.prev {
+			    left: -100%;
+			}
+			.lb-item.next.left,.lb-item.prev.right {
+			    left: 0%;
+			}
+			.lb-sign {
+			    position: absolute;
+			    right: 10px;
+			    top: 0px;
+			    padding: 5px 3px;
+			    border-radius: 6px;
+			    list-style: none;
+			    user-select: none;
+			    background-color: rgba(0,0,0,0.7);
+			}
+			.lb-sign li {
+			  	width: 22px;
+				height: 20px;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 20px;
+				text-align: center;
+				float: left;
+				color: #aaa;
+				margin: auto 4px;
+				border-radius: 3px;
+				cursor: pointer;
+			}
+			.lb-sign li:hover {
+			    color: #fff;
+			}
+			.lb-sign li.active {
+			    color: #000;
+			    background-color: #EBEBEB;
+			}
+			.lb-ctrl {
+			    position: absolute;
+			    top: 50%;
+			    transform: translateY(-50%);
+			    font-size: 50px;
+			    font-weight: 900;
+			    user-select: none;
+			    background-color: rgba(0,0,0,0.7);
+			    color: #fff;
+			    border-radius: 5px;
+			    cursor: pointer;
+			    transition: all 0.1s linear;
+			}
+			@media (max-width:568px) {
+			    .lb-ctrl {
+			    font-size: 30px;
+			  }
+			}
+			.lb-ctrl.left {
+			    left: -50px;
+			}
+			.lb-ctrl.right {
+			    right: -50px;
+			}
+			.lb-box:hover .lb-ctrl.left {
+			    left: 10px;
+			}
+			.lb-box:hover .lb-ctrl.right {
+			    right: 10px;
+			}
+			.lb-ctrl:hover {
+			    background-color: #000;
+			}
+			#lb-1{
+				position: absolute;
+				margin-top:190px;
+				width:770px;
+				margin-left: 388px;
+				height:180px;
+			}
+			#q1{
+				position: absolute;
+				margin-left: 390px;
+				margin-top: 387px;
+				color:blue;
+				font-size:16px;
+			}
+			#q2{
+				position: absolute;
+				margin-left: 440px;
+				margin-top: 387px;
+			}
+			#q3{
+				position: absolute;
+				margin-left: 452px;
+				margin-top: 389px;
+				font-size: 13px;
+			}
+			#q4{
+				position: absolute;
+				width:5px;
+				height:7px;
+				background-color: blue;
+				margin-left: 483px;
+				margin-top: 394px;
+			}
+			#q5{
+				position: absolute;
+				margin-top: 394px;
+				margin-left: 499px;
+				width:661px;
+				height: 7px;
+				background-color: #EBEBEB;
+			}
+			#qi1{
+				z-index: 30;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 445px;
+				width:200px;
+			}
+			#qi1p1{
+				color: black;
+				font-weight: 900;
+			}
+			#qi1p2{
+				font-size: 10px;;
+				color: black;
+			}
+			#qi1p3{
+				font-weight: 400;
+				color: black;
+			}
+			#qi1p4{
+				font-weight: 400;
+				color: black;
+			}
+			#d1{
+				position: absolute;
+				margin-left: 600px;
+				margin-top: 440px;
+			}
+			#qi2{
+				z-index: 30;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 595px;
+				width:202px;
+				height: 125px;
+			}
+			#qi2p1{
+				color: black;
+				font-weight: 900;
+			}
+			#qi2p2{
+				font-size: 10px;;
+				color: black;
+			}
+			#qi2p3{
+				font-weight: 400;
+				color: black;
+			}
+			#qi2p4{
+				font-weight: 400;
+				color: black;
+			}
+			#d2{
+				position: absolute;
+				margin-left: 600px;
+				margin-top: 590px;
+			}
+			#qi3{
+				z-index: 30;
+				position: absolute;
+				margin-left: 389px;
+				margin-top: 745px;
+				width: 200px;
+				height: 125px;
+			}
+			#qi3p1{
+				color: black;
+				font-weight: 900;
+			}
+			#qi3p2{
+				font-size: 10px;;
+				color: black;
+			}
+			#qi3p3{
+				font-weight: 400;
+				color: black;
+			}
+			#qi3p4{
+				font-weight: 400;
+				color: black;
+			}
+			#d3{
+				position: absolute;
+				margin-left: 600px;
+				margin-top: 740px;
+			}
+			#qi4{
+				z-index: 30;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 895px;
+				width:201px;
+				height: 125px;
+			}
+			#qi4p1{
+				color: black;
+				font-weight: 900;
+			}
+			#qi4p2{
+				font-size: 10px;;
+				color: black;
+			}
+			#qi4p3{
+				font-weight: 400;
+				color: black;
+			}
+			#qi4p4{
+				font-weight: 400;
+				color: black;
+			}
+			#d4{
+				position: absolute;
+				margin-left: 600px;
+				margin-top: 890px;
+			}
+			#qu{
+				position: absolute;
+				margin-left: 388px;
+				margin-top:1030px;
+				color:darkorchid;
+				font-size: 17px;
+				font-weight: 700;
+			}
+			#qi5{
+				z-index: 30;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 1060px;
+				width:201px;
+				height: 125px;
+			}
+			#qi5p1{
+				color: black;
+				font-weight: 900;
+			}
+			#qi5p2{
+				font-size: 10px;;
+				color: black;
+			}
+			#qi5p3{
+				font-weight: 400;
+				color: black;
+			}
+			#qi5p4{
+				font-weight: 400;
+				color: black;
+			}
+			#d5{
+				position: absolute;
+				margin-left: 600px;
+				margin-top: 1055px;
+			}
+			#qi6{
+				z-index: 30;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 1210px;
+				width:201px;
+				height: 125px;
+			}
+			#qi6p1{
+				color: black;
+				font-weight: 900;
+			}
+			#qi6p2{
+				font-size: 10px;
+				color: black;
+			}
+			#qi6p3{
+				font-weight: 400;
+				color: black;
+			}
+			#qi6p4{
+				font-weight: 400;
+				color: black;
+			}
+			#d6{
+				position: absolute;
+				margin-left: 600px;
+				margin-top: 1210px;
+			}
+			#qi7{
+				z-index: 30;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 1360px;
+				width:201px;
+				height: 125px;
+			}
+			#qi7p1{
+				color: black;
+				font-weight: 900;
+			}
+			#qi7p2{
+				font-size: 10px;
+				color: black;
+			}
+			#qi7p3{
+				font-weight: 400;
+				color: black;
+			}
+			#qi7p4{
+				font-weight: 400;
+				color: black;
+			}
+			#d7{
+				position: absolute;
+				margin-left: 600px;
+				margin-top: 1360px;
+			}
+			#ban{
+				position: absolute;
+				margin-top: 1550px;
+				width:100%;
+				height:250px;
+				background-color: #000000;
+			}
+			#ban1{
+				position: relative;
+				top: 50px;
+				left: 400px;
+				color:#FFFFFF;
+				font-size: 30px;
+			}
+			#ban2{
+				position: relative;
+				font-size: 20px;
+				top:45px;
+				left:400px;
+			}
+			#xian{
+				height: 110px;
+				width:0px;
+				position: relative;
+				left:20px;
+				top:-105px;
+				border-color: #FFFFFF;
+				border-style: solid;
+				border-width: 0.5px;
+			}
+			#ban3{
+				position: relative;
+				left:680px;
+				top:-30px;
+			}
+			#ban4{
+				position: relative;
+				left:680px;
+				top:-20px;
+			}
+			#ban5{
+				position: relative;
+				left:980px;
+				top:-216px;
+				color: #FFFFFF;
+			}
+			#ban6{
+				position: relative;
+				left:980px;
+				top:-224px;
+				color:#FFFFFF;
+			}
+			#ban7{
+				position: relative;
+				left:980px;
+				top:-232px;
+				color:#FFFFFF;
+			}
+			#ban8{
+				position: relative;
+				left:980px;
+				top:-240px;
+				color: #FFFFFF;
+			}
+			#wei1{
+				z-index: 20;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 445px;
+				width:200px;
+				height: 125px;
+				background-color: #000000;
+			}
+			#qi1:hover{
+				opacity: 0;
+			}
+			#wei1p{
+				position: relative;
+				color:#FFFFFF;
+				font-size: 30px;
+				text-align: center;
+				top:30px;
+			}
+			#wei2{
+				z-index: 20;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 595px;
+				width:202px;
+				height: 125px;
+				background-color: #000000;
+			}
+			#qi2:hover{
+				opacity:0;
+			}
+			#wei2p{
+				position: relative;
+				color:#FFFFFF;
+				font-size: 30px;
+				text-align: center;
+				top:30px;
+			}
+			#wei3{
+				z-index: 20;
+				position: absolute;
+				margin-left: 389px;
+				margin-top: 745px;
+				width:200px;
+				height: 125px;
+				background-color: #000000;
+			}
+			#qi3:hover{
+				opacity: 0;
+			}
+			#qi4:hover{
+				opacity: 0;
+			}
+			#qi5:hover{
+				opacity: 0;
+			}
+			#qi6:hover{
+				opacity: 0;
+			}
+			#qi7:hover{
+				opacity: 0;
+			}
+			#wei4{
+				z-index: 20;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 895px;
+				width:201px;
+				height: 125px;
+				background-color: #000000;
+			}
+			#wei5{
+				z-index: 20;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 1060px;
+				width:201px;
+				height: 125px;
+				background-color: #000000;
+			}
+			#wei6{
+				z-index: 20;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 1210px;
+				width:201px;
+				height: 125px;
+				background-color: #000000;
+			}
+			#wei7{
+				z-index: 20;
+				position: absolute;
+				margin-left: 388px;
+				margin-top: 1360px;
+				width:201px;
+				height: 125px;
+				background-color: #000000;
+			}
+			#wei3p{
+				position: relative;
+				color:#FFFFFF;
+				font-size: 30px;
+				text-align: center;
+				top:30px;
+			}
+			#wei4p{
+				position: relative;
+				color:#FFFFFF;
+				font-size: 30px;
+				text-align: center;
+				top:30px;
+			}
+			#wei5p{
+				position: relative;
+				color:#FFFFFF;
+				font-size: 30px;
+				text-align: center;
+				top:30px;
+			}
+			#wei6p{
+				position: relative;
+				color:#FFFFFF;
+				font-size: 30px;
+				text-align: center;
+				top:30px;
+			}
+			#wei7p{
+				position: relative;
+				color:#FFFFFF;
+				font-size: 30px;
+				text-align: center;
+				top:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="top1" src="simg/natural.jpg" alt="logo"/>
+		<img id="top2" src="simg/logo2.png" alt="标语"/>
+		<img id="top3" src="simg/logo1.png" alt="网站logo"/>
+		<div id="caiDan">
+			<div id="b1"><a href="www.baidu.com"><p>首页</p></a></div>
+			<div id="b2"><a href="www.baidu.com"><p>天文•物理</p></a></div>
+			<div id="b3"><a href="www.baidu.com"><p>材料•化学</p></a></div>
+			<div id="b4"><a href="www.baidu.com"><p>历史•人文</p></a></div>
+			<div id="b5"><a href="www.baidu.com"><p>生物•医学</p></a></div>
+			<div id="b6"><a href="www.baidu.com"><p>信息•能源</p></a></div>
+			<div id="b7"><a href="www.baidu.com"><p>More>></p></a></div>
+		</div>
+		<div class="lb-box" id="lb-1">
+		<!-- 轮播内容 -->
+		<div class="lb-content">
+  			<div class="lb-item active">
+				<a href="#">
+	  				<img src="simg/批注 2019-12-23 190326.png" alt="picture loss">	  				
+				</a>
+  			</div>
+  			<div class="lb-item">
+				<a href="#">
+	 				 <img src="simg/批注 2019-12-23 190413.png" alt="picture loss">	  				
+				</a>
+  			</div>
+  			<div class="lb-item">
+				<a href="#">
+	  				<img src="simg/批注 2019-12-23 190524.png" alt="picture loss">
+				</a>
+  			</div>
+  			<div class="lb-item">
+				<a href="#">
+	  				<img src="simg/批注 2019-12-23 190604.png" alt="picture loss">
+				</a>
+  			</div>
+  			<div class="lb-item">
+				<a href="#">
+	  				<img src="simg/批注 2019-12-23 190706.png" alt="picture loss">
+				</a>
+  			</div>   
+		</div>
+		<!-- 轮播标志 -->
+		<ol class="lb-sign">
+  			<li class="active">1</li>
+  			<li>2</li>
+  			<li>3</li>
+  			<li>4</li>
+  			<li>5</li>
+		</ol>
+		<!-- 轮播控件 -->
+		<div class="lb-ctrl left">＜</div>
+		<div class="lb-ctrl right">＞</div>
+		</div>
+		<div id="qianyanzixun">
+			<p id="q1">前沿</p>
+			<div id="q2">&gt;</div>
+			<div id="q3">资讯</div>
+			<div id="q4"></div>
+			<div id="q5"></div>
+		</div>
+		<img id="qi1" src="simg/a6d4806b890fc4ea9f66e198f95a0187_ABUIABAEGAAgnsLs7wUo1KKhpwQw8AE4mAE.png" alt="环境"/>
+		<div id="d1">
+			<a href="https://huanqiukexue.com/a/qianyan/diqiu__ziran/2019/1218/29042.html"><p id="qi1p1">他们什么都没做，却遭受了最严重的损失</p></a>
+			<p id="qi1p2">2019-12-18   10:15:35 |张二七　|博物科学</p>
+			<p id="qi1p3">今年全人类对抗气候变化的脚步似乎有所停滞。但与此同时，极端天气给人类社会带</p>
+			<p id="qi1p4">来灾难的步伐却在加速。...　</p>
+		</div>
+		<img id="qi2"src="simg/5f6a82c3f94694adc60849779224ba5d_ABUIABAEGAAg98js7wUomraklwYw8AE4ggE.png" alt="新技术"/>
+		<div id="d2">
+			<a href="https://huanqiukexue.com/a/qianyan/shengwu__yixue/2019/1218/29041.html"><p id="qi2p1">新技术利用光产热杀灭癌细胞</p></a>
+			<p id="qi2p2">2019-12-18 10:12:13 | Admin | 博物科学</p>
+			<p id="qi2p3">光热疗法是一种新兴的癌症治疗方法，它通过用红外激光束照射患处的纳米微粒，从而产生热量，烧灼特定的细</p>
+			<p id="qi2p4">胞团。...　</p>
+		</div>
+		<img id="qi3"src="simg/9d79cdd755e8340c8c48515097c1e9ff_ABUIABACGAAg68rs7wUoxK3phwMwpAU4-AI.jpg" alt="邓宏魁"/>
+		<div id="d3">
+			<a href="https://huanqiukexue.com/a/qianyan/shengwu__yixue/2019/1218/29040.html"><p id="qi3p1">邓宏魁入选《自然》年度十大人物</p></a>
+			<p id="qi3p2">2019-12-18 10:07:02 | Admin | 博物科学</p>
+			<p id="qi3p3">《自然》杂志发布了2019年影响世界的十大科学人物，来自中国北京大学-清华大学生命科学联合中心的邓宏魁</p>
+			<p id="qi3p4">入围。...</p>
+		</div>
+		<img id="qi4"src="simg/51d8929783172d8cad31ec624c08f5d9_ABUIABAEGAAgg87s7wUopdS2xQEw8AE4nwE.png" alt="蓝光"/>
+		<div id="d4">
+			<a href="https://huanqiukexue.com/a/qianyan/shengwu__yixue/2019/1218/29038.html"><p id="qi4p1">夜间使用蓝光对生物钟更有益</p></a>
+			<p id="qi4p2">2019-12-18 10:03:55 | Admin | 博物科学</p>
+			<p id="qi4p3">科学家建议在白天使用明亮的暖色光，晚上使用昏暗的冷色光，对我们保持良好的昼夜节律更为有</p>
+			<p id="qi4p4">益。...</p>
+		</div>
+		<p id="qu">趣味科学></p>
+		<img id="qi5"src="simg/2ae563cb9949f0bdbc4f56946d9ac6f0_ABUIABAEGAAgi93s7wUohoGXSTDwATifAQ.png" alt="琥珀"/>
+		<div id="d5">
+			<a href="https://huanqiukexue.com/a/qianyan/kaogu__jinhua/2019/1211/29019.html"><p id="qi5p1">科学家发现吃恐龙羽毛的昆虫</p></a>
+			<p id="qi5p2">2019-12-11 09:36:01 | Admin | 博物科学</p>
+			<p id="qi5p3">这些无翅昆虫有着类似于现代虱的躯体，以及很强壮的咀嚼式口器。其中一根羽毛有着被咀嚼的痕迹，且痕迹与</p>
+			<p id="qi5p4">寄生了虱的现代鸟类羽毛很像。...</p>
+		</div>
+		<img id="qi6" src="simg/792aeccfdf46e48b4e45aa2975c38604_ABUIABAEGAAgtPvs7wUo1vPPhAUw8AE4hwE.png" alt="染色体" />
+		<div id="d6">
+			<a href="https://huanqiukexue.com/a/qianyan/shengwu__yixue/2019/1211/29013.html"><p id="qi6p1">全球20%男性的Y染色体正在流失</p></a>
+			<p id="qi6p2">2019-12-11 08:58:39 | SARAH ZHANG | 博物科学</p>
+			<p id="qi6p3">一部分男性的Y染色体会随着年龄增长而不断丢失，有科学家指出，这可能和一些与癌症相关的基因突变有关。一</p>
+			<p id="qi6p4">但是，也有研究认为，Y染色体丢失是细胞演化过程的“自然选择”：没有了Y染色体，这些细胞能生存得更好...</p>
+		</div>
+		<img id="qi7" src="simg/5a11cb03f62ac13b97005973fcde44bb_ABUIABACGAAgu4Ht7wUo5NGe0gQwpAU4-AI.jpg" alt="美貌" />
+		<div id="d7">
+			<a href="https://huanqiukexue.com/a/qianyan/kaogu__jinhua/2019/1209/29006.html"><p id="qi7p1">现代人的美貌怎么来的？</p></a>
+			<p id="qi7p2">2019-12-09 10:23:38 | Emily Willingham | 博物科学</p>
+			<p id="qi7p3">与古人类相比，现代人类的面部特征更加精致、温和。人类如何演化出了现在的模样？一项对特殊人群的遗传学</p>
+			<p id="qi7p4">研究，填补了“自我驯化”假说缺失的关键一环。在描述我们的祖先偶然间杂交的对象——尼安德特人时,...</p>
+		</div>
+		<div id="ban">
+			<p id="ban1">Natural</p>
+			<p id="ban2">Science</p>
+			<p id="ban3">博学成就梦想</p>
+			<p id="ban4">知识改变人生</p>
+			<div id="xian"></div>
+			<p id="ban5">©二班八组版权所有</p>
+			<p id="ban6">COPYRIGHT © 2019-12-24 MZVISION. All Right Reserved</p>
+			<p id="ban7">Mail:2178415658@qq.com  QQ:2178415658</p>
+			<p id="ban8">地址:河北省石家庄市裕华区南二环东路20号</p>
+		</div>
+		<div id="wei1">
+			<p id="wei1p">热度 &nbsp;:&nbsp; 164</p>
+		</div>
+		<div id="wei2">
+			<p id="wei2p">热度 &nbsp;:&nbsp; 156</p>
+		</div>
+		<div id="wei3">
+			<p id="wei3p">热度 &nbsp;:&nbsp; 102</p>
+		</div>
+		<div id="wei4">
+			<p id="wei4p">热度 &nbsp;:&nbsp; 85</p>
+		</div>
+		<div id="wei5">
+			<p id="wei5p">热度 &nbsp;:&nbsp; 208</p>
+		</div>
+		<div id="wei6">
+			<p id="wei6p">热度 &nbsp;:&nbsp; 194</p>
+		</div>
+		<div id="wei7">
+			<p id="wei7p">热度 &nbsp;:&nbsp; 182</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = function () {
+  		// 轮播选项
+	  		const options = {
+				id: 'lb-1',              // 轮播盒ID
+				speed: 1000,              // 轮播速度(ms)
+				delay: 3000,             // 轮播延迟(ms)
+				direction: 'left',       // 图片滑动方向
+				moniterKeyEvent: true,   // 是否监听键盘事件
+				moniterTouchEvent: true  // 是否监听屏幕滑动事件
+	  		}
+	  		const lb = new Lb(options);
+	  		lb.start();
+		}
+		/**
+ 		* @desc 一个轮播插件 
+ 		* @author Mxsyx (zsimline@163.com)
+ 		* @version 1.0.0
+ 		*/
+		class Lb {
+  			constructor(options) {
+	    		this.lbBox = document.getElementById(options.id);
+	    		this.lbItems = this.lbBox.querySelectorAll('.lb-item');
+	    		this.lbSigns = this.lbBox.querySelectorAll('.lb-sign li');
+	    		this.lbCtrlL = this.lbBox.querySelectorAll('.lb-ctrl')[0];
+	    		this.lbCtrlR = this.lbBox.querySelectorAll('.lb-ctrl')[1];
+			    // 当前图片索引
+			    this.curIndex = 0;
+			    // 轮播盒内图片数量
+			    this.numItems = this.lbItems.length;		
+			    // 是否可以滑动
+			    this.status = true;		
+			    // 轮播速度
+			    this.speed = options.speed || 1000;
+			    // 等待延时
+			    this.delay = options.delay || 3000;		
+			    // 轮播方向
+			    this.direction = options.direction || 'left';		
+			    // 是否监听键盘事件
+			    this.moniterKeyEvent = options.moniterKeyEvent || false;
+			    // 是否监听屏幕滑动事件
+			    this.moniterTouchEvent = options.moniterTouchEvent || false;		
+			    this.handleEvents();
+			    this.setTransition();
+			}
+		  // 开始轮播
+		    start() {
+			    const event = {
+			      srcElement: this.direction == 'left' ? this.lbCtrlR : this.lbCtrlL
+			    };
+			    const clickCtrl = this.clickCtrl.bind(this);		
+			    // 每隔一段时间模拟点击控件
+			    this.interval = setInterval(clickCtrl, this.delay, event);
+		    }
+		  // 暂停轮播
+		    pause() {
+		    	clearInterval(this.interval);
+		  	}		
+		  /**
+		   * 设置轮播图片的过渡属性
+		   * 在文件头内增加一个样式标签
+		   * 标签内包含轮播图的过渡属性
+		   */
+		    setTransition() {
+			    const styleElement = document.createElement('style');
+			    document.head.appendChild(styleElement);
+			    const styleRule = `.lb-item {transition: left ${this.speed}ms ease-in-out}`
+			    styleElement.sheet.insertRule(styleRule, 0);
+		  	}		
+		  // 处理点击控件事件
+		  	clickCtrl(event) {
+			    if (!this.status) return;
+			    this.status = false;
+			    if (event.srcElement == this.lbCtrlR) {
+			      var fromIndex = this.curIndex,
+			      toIndex = (this.curIndex + 1) % this.numItems,
+			      direction = 'left';
+			    } else {
+			      var fromIndex = this.curIndex;
+			      toIndex = (this.curIndex + this.numItems - 1) % this.numItems,
+			      direction = 'right';
+			    }
+			    this.slide(fromIndex, toIndex, direction);
+			    this.curIndex = toIndex;
+		  	}		
+		  // 处理点击标志事件
+		    clickSign(event) {
+			    if (!this.status) return;
+			    this.status = false;
+			    const fromIndex = this.curIndex;
+			    const toIndex = parseInt(event.srcElement.getAttribute('slide-to'));
+			    const direction = fromIndex < toIndex ? 'left' : 'right';
+			    this.slide(fromIndex, toIndex, direction);
+			    this.curIndex = toIndex;
+		    }		
+		  // 处理滑动屏幕事件
+		    touchScreen(event) {
+			    if (event.type == 'touchstart') {
+			      this.startX = event.touches[0].pageX;
+			      this.startY = event.touches[0].pageY;
+			    } 
+			    else {  // touchend
+			      this.endX = event.changedTouches[0].pageX;
+			      this.endY = event.changedTouches[0].pageY;
+			      // 计算滑动方向的角度
+			      const dx = this.endX - this.startX
+			      const dy = this.startY - this.endY;
+			      const angle = Math.abs(Math.atan2(dy, dx) * 180 / Math.PI);
+			      // 滑动距离太短
+			      if (Math.abs(dx) < 10 || Math.abs(dy) < 10) return ;
+			      if (angle >= 0 && angle <= 45) {
+			        // 向右侧滑动屏幕，模拟点击左控件
+			        this.lbCtrlL.click();
+			      } 
+			      else if (angle >= 135 && angle <= 180) {
+			        // 向左侧滑动屏幕，模拟点击右控件
+			        this.lbCtrlR.click();
+			      }
+		    	}
+		  	}		
+		  // 处理键盘按下事件
+		  	keyDown(event) {
+			    if (event && event.keyCode == 37) {
+			      this.lbCtrlL.click();
+			    } 
+			    else if (event && event.keyCode == 39) {
+			      this.lbCtrlR.click();
+			    }
+		  	}		
+		  // 处理各类事件
+		  	handleEvents() {
+			    // 鼠标移动到轮播盒上时继续轮播
+			    this.lbBox.addEventListener('mouseleave', this.start.bind(this));
+			    // 鼠标从轮播盒上移开时暂停轮播
+			    this.lbBox.addEventListener('mouseover', this.pause.bind(this));
+			    // 点击左侧控件向右滑动图片
+			    this.lbCtrlL.addEventListener('click', this.clickCtrl.bind(this));
+			    // 点击右侧控件向左滑动图片
+			    this.lbCtrlR.addEventListener('click', this.clickCtrl.bind(this));
+			    // 点击轮播标志后滑动到对应的图片
+			    for (let i = 0; i < this.lbSigns.length; i++) {
+			      this.lbSigns[i].setAttribute('slide-to', i);
+			      this.lbSigns[i].addEventListener('click', this.clickSign.bind(this));
+			    }
+			    // 监听键盘事件
+			    if (this.moniterKeyEvent) {
+			      document.addEventListener('keydown', this.keyDown.bind(this));
+			    }
+			    // 监听屏幕滑动事件
+			    if (this.moniterTouchEvent) {
+			      this.lbBox.addEventListener('touchstart', this.touchScreen.bind(this));
+			      this.lbBox.addEventListener('touchend', this.touchScreen.bind(this));
+			    }
+		  	}		
+		  /**
+		   * 滑动图片
+		   * @param {number} fromIndex
+		   * @param {number} toIndex 
+		   * @param {string} direction
+		   */
+		  	slide(fromIndex, toIndex, direction) {
+			    if (direction == 'left') {
+			      this.lbItems[toIndex].className = "lb-item next";
+			      var fromClass = 'lb-item active left',
+			          toClass = 'lb-item next left';
+			    } 
+			    else {
+			      this.lbItems[toIndex].className = "lb-item prev";
+			      var fromClass = 'lb-item active right',
+			          toClass = 'lb-item prev right';
+			    }
+			    this.lbSigns[fromIndex].className = "";
+			    this.lbSigns[toIndex].className = "active";
+			    setTimeout((() => {
+			      this.lbItems[fromIndex].className = fromClass;
+			      this.lbItems[toIndex].className = toClass;
+			    }).bind(this), 50);		
+			    setTimeout((() => {
+			      this.lbItems[fromIndex].className = 'lb-item';
+			      this.lbItems[toIndex].className = 'lb-item active';
+			      this.status = true;  // 设置为可以滑动
+			    }).bind(this), this.speed + 50);
+		  	}
+		}
+	</script>
+</html>
+
