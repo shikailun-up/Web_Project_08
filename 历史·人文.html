@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<style>
+	#d1{
+		height:150px;
+		width:960px;
+		position:absolute;
+		top:50px;
+		left:50%;
+		transform: translate(-50%,0%);
+	}
+	#d1-1{
+		height:130px;
+		width:230px;
+		float:left;
+		margin-top:20px;
+	}
+	#d1-2{
+		height:50px;
+		width:300px;
+		float:left;
+		margin-top:100px;
+	}
+	#d1-3{
+		height:150px;
+		width:400px;
+		float:right;
+	}
+	#d2{
+		height:50px;
+		width:960px;
+		background-color:black;
+		position:absolute;
+		top:200px;
+		left:50%;
+		transform: translate(-50%,0%);
+	}
+	#d2-1{
+		height: 50px;
+		width:125px;
+		background-color:black;
+		float:left;
+	}
+ 	.d2-2{
+		height: 50px;
+		width:125px;
+		background-color:black;
+		margin-left:14px;
+		float:left;
+ 	}
+ 	#p1{
+ 		color:white;
+ 		text-align:center;
+ 	}
+ 	a{
+ 		text-decoration: none;
+ 	}
+ 	#d2-1:hover{
+ 		background-color: rgb(2,178,181);
+ 	}
+ 	.d2-2:hover{
+ 		background-color: rgb(2,178,181);
+ 	}
+ 	#box{
+ 		width:960px;
+ 		position:absolute;
+		top:250px;
+		left:50%;
+		transform:translate(-50%,0%);
+ 	}
+ 	#a1{
+ 		width: 960px;
+ 		height:80px;
+ 	}
+ 	#d3{
+ 		height:850px;
+ 		width: 960px;
+ 		overflow:hidden;
+ 	}
+ 	#p2{
+ 		font-size: 60px;
+ 		margin-top:0px;
+ 		text-align: center;
+ 		color:red;
+ 	}
+ 	.p3{
+ 		font-size:20px;
+ 	}
+ 	.d3-1{
+ 		width: 460px;
+ 		height: 320px;
+ 	}
+ 	#d4,#d5,#d6,#d7,#d8,#d9,#d10,#d11{
+ 		width: 960px;
+ 		position:absolute;
+ 		top:1500px;
+		left:50%;
+		transform: translate(-50%,0%);
+ 	}
+ 	#a2{
+ 		width: 960px;
+ 		height: 50px;
+ 		position:absolute;
+ 		top:1450px;
+		left:50%;
+		transform: translate(-50%,0%);
+ 	}
+ 	#a4{
+ 		width: 960px;
+ 		height: 100px;
+ 		position:absolute;
+ 		top:1350px;
+		left:50%;
+		transform: translate(-50%,0%);
+ 	}
+ 	#d4,#d5,#d6,#d7,#d8,#d9,#d10,#d11{
+ 		height: 0px;
+ 		overflow: hidden;	
+ 	
+ 	}
+ 	.d4-1{
+ 		float:left;
+ 	}
+ 	.p5{
+ 		float:right;
+ 	}
+ 	#foot{
+ 			width: 100%;
+ 			height: 138px;
+ 			background-color: #e8e8e8;
+ 			position:absolute;
+	 		top:1550px;
+			left:50%;
+			transform: translate(-50%,0%);
+ 		}
+ 		#foot-center{
+ 			width: 1100px;
+ 			height: 138px;
+ 			margin:auto;
+ 			position: relative;
+ 		}
+ 		#foot-left{
+ 			width: 400px;
+ 			height: 138px;
+ 			position: absolute;
+ 			top: 0px;
+ 			left: 0px;
+ 			border-right: 1px solid #c8c8c8;
+ 		}
+ 		#foot-left-left{
+ 			width: 140;
+ 			height: 32px;
+ 			color: rgb(7, 108, 224);
+ 			font-size: 32px;
+ 			font-weight: bold;
+ 		}
+ 		#foot-left>ul{
+ 			width: 156px;
+ 			height: 115px;
+ 			position: absolute;
+ 			right: 0px;
+ 			top: 0px;
+ 			color: #a9a9a9;
+ 		}
+ 		#foot-left>ul>li{
+ 			width: 156px;
+ 			height: 15px;
+ 			margin-top: 8px;
+ 		}
+ 		#foot-right{
+ 			width: 600px;
+ 			height: 138px;
+ 			position: absolute;
+ 			right: 100px;
+ 			top: 0px;
+ 			text-align: right;
+ 			color: #a9a9a9;
+ 		}
+ 		#foot-right>ul>li{
+ 			padding-bottom: 10px;
+ 		}
+</style>
+  <body>
+	<div id="d1">
+		<div id="d1-1"><a href=""><img src="images/head1.png" ></a></div>
+		<div id="d1-2"><img src="images/head2.png"></div>
+		<div id="d1-3"><a href=""><img src="images/head3.png"></a></div>
+	</div>
+	<div id="d2">
+		<div id="d2-1"><a href="https://shikailunxue.github.io/Web---08-/"><p id="p1">首页</p></a></div>
+		<div class="d2-2"><a href=""><p id="p1">天文·物理</p></a></div>
+		<div class="d2-2"><a href=""><p id="p1">材料·化学</p></a></div>
+		<div class="d2-2" style="background-color: rgb(2,178,181)"><a href=""><p id="p1">历史·人文</p></a></div>
+		<div class="d2-2"><a href="file:///E:/workspace/html/Web2/zuoye/Web%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E7%94%9F%E7%89%A9%C2%B7%E5%8C%BB%E5%AD%A6.html"><p id="p1">生物·医学</p></a></div>
+		<div class="d2-2"><a href=""><p id="p1">信息·能源</p></a></div>
+		<div class="d2-2"><a href=""><p id="p1">More>></p></a></div>
+	</div>	
+	<div id="box">
+		<img src="images/tu.png" width="960px" height="100px">
+		<div id="a1"><p id="p2">中国历史</p></div>
+		<div id="d3">
+			<div class="d3-1"><img class="i1" src="images/x.png"></div>
+			<div><p class="p3">夏朝是从公元前2029年开始，止公元前1559年。是史书记载的第一个奴隶制王朝。这段时间的历史不是特别详细，不过也有相关记载，禹治水成功，从而奠定了夏家在中原文化区的中心地位。后来禹去世，他的儿子继承了父亲位置，之后建立了第一个奴隶王朝夏朝。</p></div>
+			<div class="d3-1"><img class="i1" src="images/s.png"></div>
+			<div><p class="p3">夏朝的诸侯国之一，商部落的领袖商汤，起兵灭了夏，然后在现今的河南商丘建立了商朝。商朝是从公元前1559年开始，止于公元前1046年。 之后- -直沿用奴隶制度,也是中国第二个奴隶制王朝。</p></div>
+			<div class="d3-1"><img class="i1" src="images/z.png"></div>
+			<div><p class="p3">周武王姬发击败了商朝的商纣王，建立了周朝，也是中国第三个奴隶制王朝。周朝从公元前1046年开始，止于公元前256年。周朝又分：西周，东周。西周是姬发创建的，西周末期，周平王从镐京迁都至洛邑后，史称为东周。东周又分为：春秋时期和战国时期，春秋时期是从公元前770年至公元前476年；战国时期是从公元前475年至公元前221年。这两个时期也称为“春秋战国时期”，不过历来史学家对这段时期存在着很大争议。</p></div>
+			<div class="d3-1"><img class="i1" src="images/q.png"></div>
+			<div><p class="p3">秦始皇统一六国后，建立了秦朝，也是中国历史上的第一个封建王朝。秦朝是从公元前221年开始，止于公元前206年，总共经历了15年的统治时间。因此，秦朝是中国历史上寿命最短的大一统封建王朝。灭亡原因主要是，秦始皇死后，赵高跟秦二世篡改诏书，秦二世继承皇位，之后秦二世在赵高的教唆下胡作非为，导致民间起义不断，最终灭亡。</p></div>
+			<div class="d3-1"><img class="i1" src="images/h.png"></div>
+			<div><p class="p3">汉朝是楚国人刘邦所创立，刘邦就是秦朝时期的其中一支起义军。当时刘邦啥也不是，要数最强还是项羽，不过刘邦靠着韩信、张良、萧何等人的辅助下，最终打败了项羽，建立了汉朝，史称西汉。创立时间是从公元前202年，止于公元8年，在汉武帝时期，其国力达到了最巅峰状态。<p class="p3">西汉末年，王莽篡位，建立了新朝，从公元8年至公元23年，只经历了不到15年。之后就是东汉，从公园23年开始，止于公元220年，由光武帝刘秀创立。</p><p class="p3">三国之后就是西晋，结束了三国鼎立的局面，但是西晋经历的时间很短，不久就被司马睿夺得政权，史称“东晋”，即公元317年至公元420年。</p><p class="p3">再之后就是北方各族统治的多个国家，称为“十六国”，公元306年至公元439年，当时还有南北朝之分，从公元420年至公元589年。</p><p class="p3">总之这段时期比较混乱，而且也不是大一统时期，所以往往会跳过这段时期。</p></div>
+			<div class="d3-1"><img class="i1" src="images/s2.png"></div>
+			<div><p class="p3">隋文帝杨坚创立的王朝，公元581年至公元618年，都城长安。隋朝时期是，中国再次实现的大一统王朝时期，结束了南北朝的混乱局面。</p></div>
+			<div class="d3-1"><img class="i1" src="images/t.png"></div>
+			<div><p class="p3">李渊建立了唐朝（公元618年-公元907年），定都长安。后来，李世民通过玄武门之变夺得政权，史称唐太宗。因为李世民治国得当，政治也比较清明，所以出现了“贞观之治”、“开元盛世”等局面。唐朝之后就是五代十国时期，五代时期是公元907年至公元960年，十国时期是公元891年至公元979年，这是个特殊时期，统治者大多都是重武轻文。这段时期也是个混乱的时期，频发战争，动荡不堪。</p></div>
+			<div class="d3-1"><img class="i1" src="images/s3.png"></div>
+			<div><p class="p3">宋朝建立时间是公元960年至公元1279年，由宋太祖赵匡胤建立，结束了五代十国的混乱局面，又再一次实现了大一统王朝。宋朝分为北宋和南宋，北宋因金兵大举南下，最终灭亡，史称“靖康之难”。北宋灭亡后，皇族康王赵构建立了南宋，史称宋高宗。不过宋高宗比较昏庸，任用奸臣，为了自己皇位，跟金兵求和，并杀害了当时的爱国将领岳飞，缩减军队，自毁长城，最终导致灭亡。</p></div>
+			<div class="d3-1"><img class="i1" src="images/y.png"></div>
+			<div id="d3-3"><p class="p3">蒙古统治者灭了南宋后，建立了元朝，公元1206年至公元1368年。元朝时期，中国版图面积被扩至最大化。这一时期，各个民族经济交往十分密切，因此手工业、商业等有了较为明显的发展。</p></div>
+			<div class="d3-1"><img class="i1" src="images/m.png"></div>
+			<div><p class="p3">一无所有的农民朱元璋，通过起义最终夺得了政权，建立了明朝，从公元1368开始，止于公元1644年。明朝时期火器十分发达，因此武力非常强盛。朱元璋为了彰显其国力，曾7次派郑和下西洋。不过到了明朝后期，朝政腐败不堪，社会矛盾也日益尖锐，最终爆发了李自成的农民起义。<p class="p3">李自成攻陷了北京后，只是称帝一天，就被清军给追逐，起义也随之失败。</p></div>
+			<div class="d3-1"><img class="i1" src="images/q2.png"></div>
+			<div><p class="p3">皇太极定国号为“清”，清兵击败了李自成后建立了清朝。确切地说清朝应该是从公元1644年开始算起，而不是公元1616年，或者公元1936年。因为自称“朝”，不等于朝代，而且入关之后才算是大一统，这是个人的一个看法。清朝，从创建开始到乾隆初期，经济十分发达，百姓安居乐业，因此有“康乾盛世”美称。到了乾隆后期，开始走下坡路，据说乾隆传位给嘉庆帝时，国库基本是空虚状态。到了晚晴时期，清廷更是腐败不堪，更是爆发了第一次鸦片战争，清廷被迫签了屈辱条约。后来，又爆发了第二次鸦片战争，清廷又是签了各种屈辱条约。之后就是农民起义不断，社会状态混乱，再加上八国联军侵略，清朝最终灭亡。清朝的灭亡，也结束了中国2000多年的封建制度。</p></div>
+		</div>
+		<button id="btn" style="display:block;margin:0 auto;border:none;" ><img src="images/xx.png" width="100px" height="20px"></button>
+	</div>
+	<div id="a4"><p id="p2">中国人文</p></div>
+	<div id="a2"><button class="btn1" style="height:50px; width:120px;" value="0">孔子</button><button class="btn1" style="height:50px; width:120px;" value="1">孟子</button><button class="btn1" style="height:50px; width:120px;" value="2">老子</button><button class="btn1" style="height:50px; width:120px;" value="3">庄子</button><button class="btn1" style=" height:50px; width:120px;" value="4">荀子</button><button class="btn1" style="height:50px; width:120px;" value="5">董仲舒</button><button class="btn1" style="height:50px; width:120px;" value="6">朱熹</button><button class="btn1" style="height:50px; width:120px;" value="7">王守仁</button></div>
+	<div id="a3">
+		<div id="d4">
+			<div class="d4-1"><img src="images/lun5.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/lun.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/lun1.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/lun2.png" width="240px" height="250px"></div>
+			<div style="height:600px;width:960px;"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;孔子（公元前551年9月28日？―公元前479年4月11日），子姓，孔氏，名丘，字仲尼，春秋末期鲁国陬邑（今山东曲阜）人，祖籍宋国栗邑（今河南夏邑），中国古代思想家、教育家，儒家学派创始人。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;孔子开创了私人讲学之风，倡导仁义礼智信。有弟子三千，其中贤人七十二。曾带领部分弟子周游列国十三年，晚年修订《诗》《书》《礼》《乐》《易》《春秋》六经。去世后，其弟子及再传弟子把孔子及其弟子的言行语录和思想记录下来，整理编成《论语》。该书被奉为儒家经典。 [1]  孔子当时社会上最博学者之一，在世时就被尊奉为“天纵之圣”“天之木铎”，更被后世统治者尊为孔圣人、至圣、至圣先师、大成至圣文宣王先师、万世师表。其思想对中国和世界都有深远的影响，其人被列为“世界十大文化名人”之首。随着孔子影响力的扩大，祭祀孔子的“祭孔大典”一度成为和中国祖先神祭祀同等级别的“大祀”。</p></div>
+		</div>
+		<div id="d5">
+			<div class="d4-1"><img src="images/meng1.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/meng2.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/meng3.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/meng4.png" width="240px" height="250px"></div>
+			<div style="height:600px;width:960px;"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;孟子（约前372年—前289年），姬姓孟氏，名轲，字号子舆，邹国（今山东邹城）人。战国时期著名哲学家、思想家、政治家、教育家，儒家学派的代表人物之一，地位仅次于孔子，与孔子并称“孔孟”。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宣扬“仁政”，最早提出“民贵君轻”的思想。韩愈《原道》将孟子列为先秦儒家继承孔子“道统”的人物，元朝追封孟子为“亚圣公·树宸”，尊称为“亚圣”，《孟子》一书，属语录体散文集，是孟子的言论汇编，由孟子的弟子共同编写完成，倡导“以仁为本”。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代表作有《鱼我所欲也》《得道多助，失道寡助》《寡人之于国也》等。《生于忧患，死于安乐》《富贵不能淫》和《鱼我所欲也》被编入中学语文教科书中。</p></div>
+		</div>
+		<div id="d6">
+			<div class="d4-1"><img src="images/lao1.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/lao2.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/lao3.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/lao4.png" width="240px" height="250px"></div>
+			<div style="height:600px;width:960px;"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;老子，姓李名耳，字聃，一字伯阳，或曰谥伯阳，楚国苦县（今河南鹿邑）人，春秋末期人，生卒年不详，大约出生于公元前571年春秋晚期。中国古代思想家、哲学家、文学家和史学家，道家学派创始人和主要代表人物。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;老子是世界文化名人，世界百位历史名人之一，与庄子并称老庄。在道教中，老子被尊为道教始祖，称“太上老君”。在唐朝，老子被追认为李姓始祖。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;老子思想对中国哲学发展具有深刻影响，其思想核心是朴素的辩证法。在政治上，老子主张无为而治、不言之教。在权术上，老子讲究物极必反之理。在修身方面，老子是道家性命双修的始祖，讲究虚心实腹、不与人争的修持。老子传世作品《道德经》（又称《老子》），是全球文字出版发行量最大的著作之一。</p></div>
+		</div>
+		<div id="d7">
+			<div class="d4-1"><img src="images/zhuang1.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/zhuang2.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/zhuang3.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/zhuang4.png" width="240px" height="250px"></div>
+			<div style="height:600px;width:960px;"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;庄子，战国中期思想家、哲学家、文学家。姓庄，名周，宋国蒙人 [1]  ，先祖是宋国君主宋戴公 [2]  。他是继老子之后道家学派的代表人物，庄学的创立者，与老子并称“老庄”。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;庄子因崇尚自由而不应楚威王之聘，仅担任过宋国地方的漆园吏，史称“漆园傲吏”，被誉为地方官吏之楷模。他最早提出的“内圣外王”思想对儒家影响深远。他洞悉易理，指出“《易》以道阴阳”，其“三籁”思想与《易经》三才之道相合。其文想象力极为丰富，语言运用自如，灵活多变，能把微妙难言的哲理说得引人入胜。代表作品为《庄子》，其中名篇有《逍遥游》《齐物论》等。其作品被称为“文学的哲学，哲学的文学”。据传庄子尝隐居南华山，卒葬南华山，故唐玄宗天宝初，被诏封为南华真人，其书《庄子》被奉为《南华真经》。</p></div>
+		</div>
+		<div id="d8">
+			<div class="d4-1"><img src="images/xun1.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/xun2.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/xun3.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/xun4.png" width="240px" height="250px"></div>
+			<div style="height:600px;width:960px;"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;荀子（约公元前313年－公元前238年），名况，字卿，华夏族（汉族），战国末期赵国人 [1-7]  。著名思想家、文学家、政治家，时人尊称“荀卿”。西汉时因避汉宣帝刘询讳，因“荀”与“孙”二字古音相通，故又称孙卿。曾三次出任齐国稷下学宫的祭酒，后为楚兰陵（位于今山东兰陵县）令。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;荀子对儒家思想有所发展，在人性问题上，提倡性恶论，主张人性有恶，否认天赋的道德观念，强调后天环境和教育对人的影响。其学说常被后人拿来跟孟子的‘性善论’比较，荀子对重新整理儒家典籍也有相当显著的贡献。</p></div>
+		</div>
+		<div id="d9">
+			<div class="d4-1"><img src="images/dong1.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/dong2.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/dong3.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/dong4.png" width="240px" height="250px"></div>
+			<div style="height:600px;width:960px;"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;董仲舒（公元前179年－前104年），广川（河北省景县西南部,景县、故城、枣强三县交界处）人，西汉哲学家。汉景帝时任博士，讲授《公羊春秋》。汉武帝元光元年（前134），汉武帝下诏征求治国方略，董仲舒在著名的《举贤良对策》中把儒家思想与当时的社会需要相结合，并吸收了其他学派的理论，创建了一个以儒学为核心的新的思想体系，深得汉武帝的赞赏，系统地提出了“天人感应”、“大一统”学说和“诸不在六艺之科、孔子之术者，皆绝其道，勿使并进”、“罢黜百家，独尊儒术”的主张被汉武帝所采纳，使儒学成为中国社会正统思想，影响长达二千多年。其学以儒家宗法思想为中心，杂以阴阳五行说，把神权、君权、父权、夫权贯穿在一起，形成帝制神学体系。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;他提出了天人感应、三纲五常等重要儒家理论。其后，董仲舒任江都易王刘非国相10年；元朔四年（前125），任胶西王刘端国相，4年后辞职回家，著书写作。这以后，朝廷每有大事商议，皇帝即会下令使者和廷尉前去董家问他的建议，表明董仲舒仍受汉武帝尊重。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;董仲舒一生历经三朝，度过了西汉王朝的极盛时期，公元前104年病故，享年约75岁。死后得武帝眷顾，被赐葬于长安下马陵。</p></div>
+		</div>
+		<div id="d10">
+			<div class="d4-1"><img src="images/zhu1.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/zhu2.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/zhu3.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/zhu4.png" width="240px" height="250px"></div>
+			<div style="height:600px;width:960px;"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;朱熹（1130年10月18日—1200年4月23日），字元晦，又字仲晦，号晦庵，晚称晦翁，谥文，世称朱文公。祖籍徽州府婺源县（今江西省婺源），出生于南剑州尤溪（今属福建省尤溪县）。宋朝著名的理学家、思想家、哲学家、教育家、诗人，闽学派的代表人物，儒学集大成者，世尊称为朱子。朱熹是唯一非孔子亲传弟子而享祀孔庙，位列大成殿十二哲者中，受儒教祭祀。 [1]  朱熹是“二程”（程颢、程颐）的三传弟子李侗的学生，与二程合称“程朱学派”。朱熹的理学思想对元、明、清三朝影响很大，成为三朝的官方哲学，是中国教育史上继孔子后的又一人。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;朱熹十九岁考中进士，曾任江西南康、福建漳州知府、浙东巡抚，做官清正有为，振举书院建设。官拜焕章阁侍制兼侍讲，为宋宁宗皇帝讲学。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;朱熹著述甚多，有《四书章句集注》《太极图说解》《通书解说》《周易读本》《楚辞集注》，后人辑有《朱子大全》《朱子集语象》等。其中《四书章句集注》成为钦定的教科书和科举考试的标准。</p></div>
+		</div>
+		<div id="d11">
+			<div class="d4-1"><img src="images/wang1.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/wang2.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/wang3.png" width="240px" height="250px"></div>
+			<div class="d4-1"><img src="images/wang4.png" width="240px" height="250px"></div>
+			<div style="height:600px;width:960px;"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;王守仁（1472年10月31日－1529年1月9日），汉族，幼名云，字伯安，别号阳明，浙江余姚人。明代著名的思想家、哲学家、书法家兼军事家、教育家。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;弘治十二年（1499年）进士，历任刑部主事、贵州龙场驿丞、庐陵知县、右佥都御史、南赣巡抚、两广总督等职，晚年官至南京兵部尚书、都察院左都御史。因平定宸濠之乱等军功而封爵新建伯，隆庆时追赠侯爵。</p>
+<p>王守仁是明代心学集大成者，明代心学发展的基本历程，可以归结为：陈献章开启，湛若水完善，王阳明集大成。王守仁的学说思想王学（阳明学）的直接源头是陈献章与湛若水的“陈湛心学”，阳明心学和与陈献章的学说堪相一致，已是学界的共识。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+万历十二年（1584年），在王守仁逝世后五十四年，王守仁从祀孔庙，他与薛瑄、胡居仁、陈献章一起成为明朝从祀孔庙的四位学者。王守仁的从祀，表明王阳明心学最终得到了官方的认可。王阳明心学后来还传入了日本、朝鲜等国。其弟子极众，世称姚江学派。其文章博大昌达，行墨间有俊爽之气。有《王文成公全书》。</p></div>
+		</div>
+		<div id="foot">
+		<div id="foot-center">
+			<div id="foot-left">
+				<div id="foot-left-left">Astronomy</div>
+				<ul>
+					<li>组员：</li>
+					<li>史恺伦</li>
+					<li>刘志伟</li>
+					<li>周双文</li>
+					<li>付焘</li>
+				</ul>
+			</div>
+			<div id="foot-right">
+				<ul>
+					<li>首页 | 天文•物理 | 材料•化学 | 历史•人文 | 生物•医学 | 信息•能源 | more>></li>
+					<li>这一行我也不知道写啥</li>
+					<li>Mail：ihsofaiofhaslslsakcsklch.co    QQ：020-000000</li>
+					<li>地址：河北省石家庄市河北师范大学诚朴园3号楼205</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+</body>
+<script>
+	var btn = document.getElementById('btn');
+	var btn1 = document.getElementsByClassName('btn1');
+    var spread = document.getElementById('d3');
+    var spread2 = document.getElementById('foot');
+    var spread4 = document.getElementById('d4');
+    var spread5 = document.getElementById('d5');
+    var spread6 = document.getElementById('d6');
+    var spread7 = document.getElementById('d7');
+    var spread8 = document.getElementById('d8');
+    var spread9 = document.getElementById('d9');
+    var spread10 = document.getElementById('d10');
+    var spread11 = document.getElementById('d11');
+ 	let name = ["孔子","孟子","老子","庄子","荀子","董仲舒","朱熹","王守仁"]; 	
+    var iSpread = false;
+    var iSpread1 = false;
+    var iSpread2 = false;
+    var iSpread3 = false;
+    var iSpread4 = false;
+    var iSpread5 = false;
+    var iSpread6 = false;
+    var iSpread7 = false;
+    var iSpread8 = false;
+    var interval = 1;
+    var height = spread.scrollHeight;
+    var height2 = spread4.scrollHeight;
+    var time = 1;
+    var speed = height/time;
+    var speed2 = height2/time;
+    btn.onclick = function () {
+        btn.disabled = 'disabled';
+        if(!iSpread){
+            var speeds = 0;
+            var timer = setInterval(function () {
+                speeds += speed;
+                spread.style.height = speeds + 'px';
+                if(iSpread1 == true || iSpread2 == true || iSpread3 == true || iSpread4 == true || iSpread5 == true || iSpread6 == true || iSpread7 == true || iSpread8 == true){
+                document.getElementById('foot').style.top = 1100 + speeds + 'px';
+            }else{
+            	document.getElementById('foot').style.top = 700 + speeds + 'px';
+            }
+                document.getElementById('d4').style.top = 650 + speeds + 'px';
+                document.getElementById('d5').style.top = 650 + speeds + 'px';
+                document.getElementById('d6').style.top = 650 + speeds + 'px';
+                document.getElementById('d7').style.top = 650 + speeds + 'px';
+                document.getElementById('d8').style.top = 650 + speeds + 'px';
+                document.getElementById('d9').style.top = 650 + speeds + 'px';
+                document.getElementById('d10').style.top = 650 + speeds + 'px';
+                document.getElementById('d11').style.top = 650 + speeds + 'px';
+                document.getElementById('a2').style.top = 600 + speeds + 'px';
+                document.getElementById('a4').style.top = 500 + speeds + 'px';
+                if(parseInt(spread.style.height) >=height){
+                    clearTimeout(timer);
+                    btn.disabled = '';
+                }
+            },interval)
+            this.innerHTML = '<img src="images/ss.png" width="100px" height="20px">';
+
+        }else {
+            var speeds = height;
+            this.innerHTML = '<img src="images/xx.png" width="100px" height="20px">';
+            var timer = setInterval(function () {
+                speeds -= speed - 850 ;
+                spread.style.height = speeds + 'px';
+                if(iSpread1 == true || iSpread2 == true || iSpread3 == true || iSpread4 == true || iSpread5 == true || iSpread6 == true || iSpread7 == true || iSpread8 == true){
+                document.getElementById('foot').style.top = 1100 + speeds + 'px';
+            }else{
+            	document.getElementById('foot').style.top = 700 + speeds + 'px';
+            }
+                document.getElementById('d4').style.top = 650 + speeds + 'px';
+                document.getElementById('d5').style.top = 650 + speeds + 'px';
+                document.getElementById('d6').style.top = 650 + speeds + 'px';
+                document.getElementById('d7').style.top = 650 + speeds + 'px';
+                document.getElementById('d8').style.top = 650 + speeds + 'px';
+                document.getElementById('d9').style.top = 650 + speeds + 'px';
+                document.getElementById('d10').style.top = 650 + speeds + 'px';
+                document.getElementById('d11').style.top = 650 + speeds + 'px';
+                document.getElementById('a2').style.top = 600 + speeds + 'px';
+                document.getElementById('a4').style.top = 500 + speeds + 'px';
+                if(speeds <= 850){
+                    clearTimeout(timer);
+                    btn.disabled = '';
+                }
+            },interval);
+        }
+        iSpread = !iSpread;
+    }
+    for(var i=0;i<btn1.length;i++){
+	    btn1[i].onclick = function () {
+	    	if(this.value==0){
+		        btn.disabled = 'disabled';
+		        if(!iSpread1){
+		            var speeds = 0;
+		            var timer = setInterval(function () {
+		                speeds += speed2;
+		                spread4.style.height = speeds + 'px';
+		                if(iSpread){
+		                spread2.style.top = speeds + 5800 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1400 + 'px';
+		            }
+		                spread5.style.height = height2-speeds + 'px';
+		                spread6.style.height = height2-speeds + 'px';
+		                spread7.style.height = height2-speeds + 'px';
+		                spread8.style.height = height2-speeds + 'px';
+		                spread9.style.height = height2-speeds + 'px';
+		                spread10.style.height = height2-speeds + 'px';
+		                spread11.style.height = height2-speeds + 'px';
+		                if(parseInt(spread4.style.height) >=height2){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval)
+		            this.innerHTML = name[this.value];
+		        }else {
+		            var speeds = height2;
+		            this.innerHTML = name[this.value];
+		            var timer = setInterval(function () {
+		                speeds -= speed2;
+		                 if(iSpread){
+		                spread2.style.top = speeds + 6000 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1550 + 'px';
+		            }
+		                spread4.style.height = speeds + 'px';
+		                spread5.style.height = speeds + 'px';
+		                spread6.style.height = speeds + 'px';
+		                spread7.style.height = speeds + 'px';
+		                spread8.style.height = speeds + 'px';
+		                spread9.style.height = speeds + 'px';
+		                spread10.style.height = speeds + 'px';
+		                spread11.style.height = speeds + 'px';
+		                if(speeds <= 0){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval);
+		        }
+		        iSpread1 = !iSpread1;
+		        iSpread2 = false;
+	            iSpread3 = false;
+	            iSpread4 = false;
+	            iSpread5 = false;
+	            iSpread6 = false;
+	            iSpread7 = false;
+	            iSpread8 = false;
+		    }
+		    if(this.value==1){
+		        btn.disabled = 'disabled';
+		        if(!iSpread2){
+		            var speeds = 0;
+		            var timer = setInterval(function () {
+		                speeds += speed2;
+		                spread5.style.height = speeds + 'px';
+		                if(iSpread){
+		                spread2.style.top = speeds + 5800 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1400 + 'px';
+		            }
+		                spread4.style.height = height2-speeds + 'px';
+		                spread6.style.height = height2-speeds + 'px';
+		                spread7.style.height = height2-speeds + 'px';
+		                spread8.style.height = height2-speeds + 'px';
+		                spread9.style.height = height2-speeds + 'px';
+		                spread10.style.height = height2-speeds + 'px';
+		                spread11.style.height = height2-speeds + 'px';
+		                if(parseInt(spread5.style.height) >=height2){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval)
+		            this.innerHTML = name[this.value];
+		        }else {
+		            var speeds = height2;
+		            this.innerHTML = name[this.value];
+		            var timer = setInterval(function () {
+		                speeds -= speed2;
+		                 if(iSpread){
+		                spread2.style.top = speeds + 6000 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1550 + 'px';
+		            }
+		                spread4.style.height = speeds + 'px';
+		                spread5.style.height = speeds + 'px';
+		                spread6.style.height = speeds + 'px';
+		                spread7.style.height = speeds + 'px';
+		                spread8.style.height = speeds + 'px';
+		                spread9.style.height = speeds + 'px';
+		                spread10.style.height = speeds + 'px';
+		                spread11.style.height = speeds + 'px';
+
+		                if(speeds <= 0){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval);
+		        }
+		        iSpread2 = !iSpread2;
+		        iSpread1 = false;
+	            iSpread3 = false;
+	            iSpread4 = false;
+	            iSpread5 = false;
+	            iSpread6 = false;
+	            iSpread7 = false;
+	            iSpread8 = false;
+		    }
+			if(this.value==2){
+		        btn.disabled = 'disabled';
+		        if(!iSpread3){
+		            var speeds = 0;
+		            var timer = setInterval(function () {
+		                speeds += speed2;
+		                spread6.style.height = speeds + 'px';
+		                if(iSpread){
+		                spread2.style.top = speeds + 5800 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1400 + 'px';
+		            }
+		                spread4.style.height = height2-speeds + 'px';
+		                spread5.style.height = height2-speeds + 'px';
+		                spread7.style.height = height2-speeds + 'px';
+		                spread8.style.height = height2-speeds + 'px';
+		                spread9.style.height = height2-speeds + 'px';
+		                spread10.style.height = height2-speeds + 'px';
+		                spread11.style.height = height2-speeds + 'px';
+		                if(parseInt(spread6.style.height) >=height2){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval)
+		            this.innerHTML = name[this.value];
+		        }else {
+		            var speeds = height2;
+		            this.innerHTML = name[this.value];
+		            var timer = setInterval(function () {
+		                speeds -= speed2;
+		                 if(iSpread){
+		                spread2.style.top = speeds + 6000 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1550 + 'px';
+		            }
+		                spread4.style.height = speeds + 'px';
+		                spread5.style.height = speeds + 'px';
+		                spread6.style.height = speeds + 'px';
+		                spread7.style.height = speeds + 'px';
+		                spread8.style.height = speeds + 'px';
+		                spread9.style.height = speeds + 'px';
+		                spread10.style.height = speeds + 'px';
+		                spread11.style.height = speeds + 'px';
+		                if(speeds <= 0){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval);
+		        }
+		        iSpread3 = !iSpread3;
+		        iSpread1 = false;
+	            iSpread2 = false;
+	            iSpread4 = false;
+	            iSpread5 = false;
+	            iSpread6 = false;
+	            iSpread7 = false;
+	            iSpread8 = false;
+		    }
+			if(this.value==3){
+		        btn.disabled = 'disabled';
+		        if(!iSpread4){
+		            var speeds = 0;
+		            var timer = setInterval(function () {
+		                speeds += speed2;
+		                spread7.style.height = speeds + 'px';
+		                if(iSpread){
+		                spread2.style.top = speeds + 5800 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1400 + 'px';
+		            }
+		                spread4.style.height = height2-speeds + 'px';
+		                spread5.style.height = height2-speeds + 'px';
+		                spread6.style.height = height2-speeds + 'px';
+		                spread8.style.height = height2-speeds + 'px';
+		                spread9.style.height = height2-speeds + 'px';
+		                spread10.style.height = height2-speeds + 'px';
+		                spread11.style.height = height2-speeds + 'px';
+		                if(parseInt(spread7.style.height) >=height2){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval)
+		            this.innerHTML = name[this.value];
+		        }else {
+		            var speeds = height2;
+		            this.innerHTML = name[this.value];
+		            var timer = setInterval(function () {
+		                speeds -= speed2;
+		                 if(iSpread){
+		                spread2.style.top = speeds + 6000 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1550 + 'px';
+		            }
+		                spread4.style.height = speeds + 'px';
+		                spread5.style.height = speeds + 'px';
+		                spread6.style.height = speeds + 'px';
+		                spread7.style.height = speeds + 'px';
+		                spread8.style.height = speeds + 'px';
+		                spread9.style.height = speeds + 'px';
+		                spread10.style.height = speeds + 'px';
+		                spread11.style.height = speeds + 'px';
+		                if(speeds <= 0){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval);
+		        }
+		        iSpread4 = !iSpread4;
+		        iSpread1 = false;
+	            iSpread2 = false;
+	            iSpread3 = false;
+	            iSpread5 = false;
+	            iSpread6 = false;
+	            iSpread7 = false;
+	            iSpread8 = false;
+		    }
+		    if(this.value==4){
+
+		        btn.disabled = 'disabled';
+		        if(!iSpread5){
+		            var speeds = 0;
+		            var timer = setInterval(function () {
+		                speeds += speed2;
+		                if(iSpread){
+		                spread2.style.top = speeds + 5800 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1400 + 'px';
+		            }
+		                spread8.style.height = speeds + 'px';
+		                spread4.style.height = height2-speeds + 'px';
+		                spread5.style.height = height2-speeds + 'px';
+		                spread6.style.height = height2-speeds + 'px';
+		                spread7.style.height = height2-speeds + 'px';
+		                spread9.style.height = height2-speeds + 'px';
+		                spread10.style.height = height2-speeds + 'px';
+		                spread11.style.height = height2-speeds + 'px';
+		                if(parseInt(spread8.style.height) >=height2){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval)
+		            this.innerHTML = name[this.value];
+		        }else {
+		            var speeds = height2;
+		            this.innerHTML = name[this.value];
+		            var timer = setInterval(function () {
+		                speeds -= speed2;
+		                 if(iSpread){
+		                spread2.style.top = speeds + 6000 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1550 + 'px';
+		            }
+		                spread4.style.height = speeds + 'px';
+		                spread5.style.height = speeds + 'px';
+		                spread6.style.height = speeds + 'px';
+		                spread7.style.height = speeds + 'px';
+		                spread8.style.height = speeds + 'px';
+		                spread9.style.height = speeds + 'px';
+		                spread10.style.height = speeds + 'px';
+		                spread11.style.height = speeds + 'px';
+		                if(speeds <= 0){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval);
+		        }
+		        iSpread5 = !iSpread5;
+		        iSpread1 = false;
+	            iSpread2 = false;
+	            iSpread3 = false;
+	            iSpread4 = false;
+	            iSpread6 = false;
+	            iSpread7 = false;
+	            iSpread8 = false;
+		    }
+		    if(this.value==5){
+		        btn.disabled = 'disabled';
+		        if(!iSpread6){
+		            var speeds = 0;
+		            var timer = setInterval(function () {
+		                speeds += speed2;
+		                if(iSpread){
+		                spread2.style.top = speeds + 5800 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1400 + 'px';
+		            }
+		                spread9.style.height = speeds + 'px';
+		                spread4.style.height = height2-speeds + 'px';
+		                spread5.style.height = height2-speeds + 'px';
+		                spread6.style.height = height2-speeds + 'px';
+		                spread8.style.height = height2-speeds + 'px';
+		                spread7.style.height = height2-speeds + 'px';
+		                spread10.style.height = height2-speeds + 'px';
+		                spread11.style.height = height2-speeds + 'px';
+		                if(parseInt(spread9.style.height) >=height2){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval)
+		            this.innerHTML = name[this.value];
+		        }else {
+		            var speeds = height2;
+		            this.innerHTML = name[this.value];
+		            var timer = setInterval(function () {
+		                speeds -= speed2;
+		                 if(iSpread){
+		                spread2.style.top = speeds + 6000 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1550 + 'px';
+		            }
+		                spread4.style.height = speeds + 'px';
+		                spread5.style.height = speeds + 'px';
+		                spread6.style.height = speeds + 'px';
+		                spread7.style.height = speeds + 'px';
+		                spread8.style.height = speeds + 'px';
+		                spread9.style.height = speeds + 'px';
+		                spread10.style.height = speeds + 'px';
+		                spread11.style.height = speeds + 'px';
+		                if(speeds <= 0){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval);
+		        }
+		        iSpread6 = !iSpread6;
+		        iSpread1 = false;
+	            iSpread2 = false;
+	            iSpread3 = false;
+	            iSpread5 = false;
+	            iSpread4 = false;
+	            iSpread7 = false;
+	            iSpread8 = false;
+		    }
+		    if(this.value==6){
+		        btn.disabled = 'disabled';
+		        if(!iSpread7){
+		            var speeds = 0;
+		            var timer = setInterval(function () {
+		                speeds += speed2;
+		                if(iSpread){
+		                spread2.style.top = speeds + 5800 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1400 + 'px';
+		            }
+		                spread10.style.height = speeds + 'px';
+		                spread4.style.height = height2-speeds + 'px';
+		                spread5.style.height = height2-speeds + 'px';
+		                spread6.style.height = height2-speeds + 'px';
+		                spread8.style.height = height2-speeds + 'px';
+		                spread9.style.height = height2-speeds + 'px';
+		                spread7.style.height = height2-speeds + 'px';
+		                spread11.style.height = height2-speeds + 'px';
+		                if(parseInt(spread10.style.height) >=height2){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval)
+		            this.innerHTML = name[this.value];
+		        }else {
+		            var speeds = height2;
+		            this.innerHTML = name[this.value];
+		            var timer = setInterval(function () {
+		                speeds -= speed2;
+		                 if(iSpread){
+		                spread2.style.top = speeds + 6000 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1550 + 'px';
+		            }
+		                spread4.style.height = speeds + 'px';
+		                spread5.style.height = speeds + 'px';
+		                spread6.style.height = speeds + 'px';
+		                spread7.style.height = speeds + 'px';
+		                spread8.style.height = speeds + 'px';
+		                spread9.style.height = speeds + 'px';
+		                spread10.style.height = speeds + 'px';
+		                spread11.style.height = speeds + 'px';
+		                if(speeds <= 0){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval);
+		        }
+		        iSpread7 = !iSpread7;
+		        iSpread1 = false;
+	            iSpread2 = false;
+	            iSpread3 = false;
+	            iSpread5 = false;
+	            iSpread6 = false;
+	            iSpread4 = false;
+	            iSpread8 = false;
+		    }
+		    if(this.value==7){
+		        btn.disabled = 'disabled';
+		        if(!iSpread8){
+		            var speeds = 0;
+		            var timer = setInterval(function () {
+		                speeds += speed2;
+		                if(iSpread){
+		                spread2.style.top = speeds + 5850 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1400 + 'px';
+		            }
+		                spread11.style.height = speeds + 'px';
+		                spread4.style.height = height2-speeds + 'px';
+		                spread5.style.height = height2-speeds + 'px';
+		                spread6.style.height = height2-speeds + 'px';
+		                spread8.style.height = height2-speeds + 'px';
+		                spread9.style.height = height2-speeds + 'px';
+		                spread10.style.height = height2-speeds + 'px';
+		                spread7.style.height = height2-speeds + 'px';
+		                if(parseInt(spread11.style.height) >=height2){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval)
+		            this.innerHTML = name[this.value];
+		        }else {
+		            var speeds = height2;
+		            this.innerHTML = name[this.value];
+		            var timer = setInterval(function () {
+		                speeds -= speed2;
+		                 if(iSpread){
+		                spread2.style.top = speeds + 6000 + 'px';
+		            }else{
+		            	spread2.style.top = speeds + 1550 + 'px';
+		            }
+		                spread4.style.height = speeds + 'px';
+		                spread5.style.height = speeds + 'px';
+		                spread6.style.height = speeds + 'px';
+		                spread7.style.height = speeds + 'px';
+		                spread8.style.height = speeds + 'px';
+		                spread9.style.height = speeds + 'px';
+		                spread10.style.height = speeds + 'px';
+		                spread11.style.height = speeds + 'px';
+		                if(speeds <= 0){
+		                    clearTimeout(timer);
+		                    btn.disabled = '';
+		                }
+		            },interval);
+		        }
+		        iSpread8 = !iSpread8;
+		        iSpread1 = false;
+	            iSpread2 = false;
+	            iSpread3 = false;
+	            iSpread5 = false;
+	            iSpread6 = false;
+	            iSpread7 = false;
+	            iSpread4 = false;
+		    }
+	    }
+    }
+</script>
+</html>

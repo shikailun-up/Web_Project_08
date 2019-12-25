@@ -1,0 +1,568 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>生物·医学</title>
+<style>
+		*{
+  			padding: 0;
+  			margin: 0;
+  		}
+  		ul,li{
+  			list-style: none;
+  		}
+  		a:visited {
+  			color: black;
+  		}
+  		.box{
+  			width: 1100px;
+  			height:334px;
+  			position:absolute;
+  			top: 200px;
+  			overflow: hidden;
+  		}
+  		.slider{
+  			width: 7700px;
+  			position: absolute;
+  			left: -1100px;
+  		}
+  		.slide{
+  			width: 750px;
+  			height: 334px;
+  			float: left;
+  		}
+  		.box>span{
+  			display: block;
+  			width: 30px;
+  			height: 50px;
+  			text-align: center;
+  			cursor: pointer;
+  			top: 120px;
+  			line-height: 50px;
+  			font-size: 30px;
+  			position: absolute;
+  			opacity: 50;
+  		}
+  		#left{
+  			left: 3px;
+  		}
+  		#right{
+  			right: 3px;
+  		}
+  		.nav{
+  			position: absolute;
+  			right: 0px;
+  			bottom: 15px;
+  		}
+  		.nav>li{
+  			float: left;
+  			width: 10px;
+  			height: 10px;
+  			background: #ccc;
+  			cursor: pointer;
+  			margin: 0 5px;
+  			border-radius: 50%;
+  		}
+  		.nav .active{
+  			background: red;
+  		}
+
+		#all{
+			width: 1100px;
+			height:534px;
+			margin: auto;
+			position: relative;
+		}
+		#navone{
+			width: 1100px;
+			height:200px;
+			position: relative;
+		}
+		
+		.slidee{
+  			width: 290px;
+  			height: 234px;
+  			float: left;
+  			background-color: #f7f7f7;
+  			text-align: center;
+  			padding: 50px 30px 50px 30px;
+  		}
+  		.phs-p{
+  			color: red;
+  		}
+  		.phs-h1{
+  			margin-top: 10px;  
+  			margin-bottom: 30px;		
+  		}
+  		.phs-span{
+  			font-size: 14px;
+  		}
+
+  		#d1{
+  			width: 1100px;
+  			height: 150px;
+  			position: absolute;
+  			top: 0px;
+  		}
+  		#d1-1{
+		height:130px;
+		width:230px;
+		float:left;
+		margin-top:20px;
+		}
+		#d1-2{
+			height:50px;
+			width:300px;
+			float:left;
+			margin-top:100px;
+		}
+		#d1-3{
+			height:150px;
+			width:400px;
+			float:right;
+		}
+		#d2{
+  			width: 1100px;
+  			height: 50px;
+  			background-color:black;
+  			position: absolute;
+  			bottom: 0px;
+  		}
+  		#d2>ul{
+  			width: 1100px;
+  			height: 50px;
+  			position: relative;
+  		}
+  		#d2>ul>li{
+  			width: 137px;
+  			height: 37px;
+  			color: #fff;
+  			float: left;
+  			margin-right: 20px;
+  			text-align: center;
+  			padding-top: 13px;
+  		}
+  		#d2>ul>li:hover{
+ 			background-color: rgb(2,178,181);
+ 		}
+ 		#Astronomy{
+ 			text-decoration: none;
+ 			background-color: rgb(2,178,181);
+ 		}
+
+ 		#shower{
+ 			position: absolute;
+ 			top: 554px;
+ 		}
+ 		#shower-left{
+ 			width: 750px;
+ 			height: 632px;
+ 			position: absolute;
+ 			left: 0px;
+ 			top: 0px;
+ 		}
+ 		
+ 		#shower-left>ul>li{
+ 			width: 350px;
+ 			height: 128px;
+ 			margin-bottom: 30px;
+ 			margin-right: 25px;
+ 			float:left;
+ 			position: relative;
+ 			text-align: left;
+ 		}
+ 		#shower-left>ul>li>img{
+ 			width: 164px;
+ 			height: 128px;
+ 			position: absolute;
+ 			top: 0px;
+ 			left: 0px;
+ 			margin-right: 15px;
+ 		}
+ 		#shower-left>ul>li>a{
+ 			width: 156px;
+ 			height: 50px;
+ 			position: absolute;
+ 			top: 4px;
+ 			right: 15px;
+ 			text-decoration: none;
+ 		}
+ 		#shower-left>ul>li>span{
+ 			width: 156px;
+ 			height: 26px;
+ 			position: absolute;
+ 			top: 40px;
+ 			right: 15px;
+ 			font-size: 14px;
+ 			color: #666666;
+ 		}
+ 		#shower-left>ul>li>dd{
+ 			width: 156px;
+ 			height: 40px;
+ 			position: absolute;
+ 			top: 70px;
+ 			right: 15px;
+ 			font-size: 12px;
+ 			color: #666666;
+ 		}
+ 		#shower-right{
+ 			width: 330px;
+ 			height: 632px;
+ 			position: absolute;
+ 			right: 0px;
+ 			top: 0px;
+ 		}
+ 		#science{
+ 			width: 298px;
+ 			height: 384px;
+ 			margin:0px 16px;
+ 			position: relative;
+ 			text-align: left;
+ 			background-color: #f7f7f7;
+ 		}
+ 		#science-top{
+ 			width: 298px;
+ 			height:30px;
+ 			position: absolute;
+ 			top: 10px;
+ 			left: 0px;
+ 			border-bottom: 1px  solid black;
+ 		}
+ 		#science-cen{
+ 			width: 298px;
+ 			height: 200px;
+ 			position: absolute;
+ 			top: 50px;
+ 			left: 9px;
+ 		}
+ 		#science-bottom{
+ 			width: 298px;
+ 			height: 120px;
+ 			position: absolute;
+ 			bottom: 0px;
+ 		}
+ 		#science-bottom>li{
+ 			width: 298px;
+ 			height: 30px;
+ 			float: left;
+ 			margin-bottom:10px;
+ 			text-align: center;
+ 			color: #666666;
+ 			font-size: 14px;
+ 			border-bottom: 1px  dashed #666666;
+ 		}
+ 		#video{
+ 			width: 248px;
+ 			height: 138px;
+ 			position: absolute;
+ 			left: 41px;
+ 			bottom: 60px;
+ 		}
+ 		#video-text{
+ 			width: 248px;
+ 			height: 36px;
+ 			position: absolute;
+ 			top: -40px;
+ 			border-bottom: 1px solid black;
+ 		}
+ 		#foot{
+ 			width: 100%;
+ 			height: 138px;
+ 			background-color: #e8e8e8;
+ 			position: absolute;
+ 			top: 1190px;
+ 			padding: 60px 0px 50px;
+ 		}
+ 		#foot-center{
+ 			width: 1100px;
+ 			height: 138px;
+ 			margin:auto;
+ 			position: relative;
+ 		}
+ 		#foot-left{
+ 			width: 400px;
+ 			height: 138px;
+ 			position: absolute;
+ 			top: 0px;
+ 			left: 0px;
+ 			border-right: 1px solid #c8c8c8;
+ 		}
+ 		#foot-left-left{
+ 			width: 140;
+ 			height: 32px;
+ 			color: rgb(7, 108, 224);
+ 			font-size: 32px;
+ 			font-weight: bold;
+ 		}
+ 		#foot-left>ul{
+ 			width: 156px;
+ 			height: 115px;
+ 			position: absolute;
+ 			right: 0px;
+ 			top: 0px;
+ 			color: #a9a9a9;
+ 		}
+ 		#foot-left>ul>li{
+ 			width: 156px;
+ 			height: 15px;
+ 			margin-top: 8px;
+ 		}
+ 		#foot-right{
+ 			width: 600px;
+ 			height: 138px;
+ 			position: absolute;
+ 			right: 100px;
+ 			top: 0px;
+ 			text-align: right;
+ 			color: #a9a9a9;
+ 		}
+ 		#foot-right>ul>li{
+ 			padding-bottom: 10px;
+ 		}
+</style>
+</head>
+<body>
+	<div id="all">
+		<div id="navone">
+			<div id="d1">
+				<div id="d1-1"><a href=""><img src="images/head1.png" ></a></div>
+				<div id="d1-2"><img src="images/head2.PNG"></div>
+				<div id="d1-3"><a href=""><img src="images/head3.png"></a></div>
+			</div>
+			<div id="d2">
+				<ul>
+					<li><a href="https://shikailunxue.github.io/Web---08-/"><p style="color:white;text-decoration:none;">首页</p></a></li>
+					<li>天文·物理</li>
+					<li>材料·化学</li>
+					<li><a href="file:///E:/workspace/html/Web2/zuoye/Web%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E5%8E%86%E5%8F%B2%C2%B7%E4%BA%BA%E6%96%87.html"><p style="color:white;text-decoration:none;">历史·人文</p></a></li>
+					<li id="Astronomy">生物·医学</li>
+					<li>信息·能源</li>
+					<li>More>></li>
+				</ul>
+			</div>
+		</div>
+		<div class="box" id="box">
+			<div class="slider" id="slider">
+				<div class="slide"><a href="file:///E:/workspace/html/Web2/zuoye/Web%E5%A4%A7%E4%BD%9C%E4%B8%9A/sss5.html"><img src="images/sw5.png" alt=""></a></div>
+				<div class="slidee">
+					<p class="phs-p">生物·医学</p>
+					<h3 class="phs-h1">“返老还童”</h3>
+					<span class="phs-span">Nat Med：新干细胞技术让小鼠“返老还童”</span>
+				</div>
+				<div class="slide"><a href="file:///E:/workspace/html/Web2/zuoye/Web%E5%A4%A7%E4%BD%9C%E4%B8%9A/sss3.html"><img src="images/sw1.png" alt=""></a></div>
+				<div class="slidee">
+					<p class="phs-p">生物·医学</p>
+					<h3 class="phs-h1">胰腺β细胞</h3>
+					<span class="phs-span">Cell Stem Cell：科学家成功将皮肤细胞重编程为产生胰岛素的胰腺β细胞</span>
+				</div>
+				<div class="slide"><a href="file:///E:/workspace/html/Web2/zuoye/Web%E5%A4%A7%E4%BD%9C%E4%B8%9A/sss4.html"><img src="images/sw2.png" alt=""></a></div>
+				<div class="slidee">
+					<p class="phs-p">生物·医学</p>
+					<h3 class="phs-h1">3D打印组织</h3>
+					<span class="phs-span">Nat Commun：新技术有望实现3D打印组织</span>
+				</div>
+				<div class="slide"><a href="file:///E:/workspace/html/Web2/zuoye/Web%E5%A4%A7%E4%BD%9C%E4%B8%9A/sss2.html"><img src="images/sw3.png" alt=""></a></div>
+				<div class="slidee">
+					<p class="phs-p">生物·医学</p>
+					<h3 class="phs-h1">肠道菌群和肠道</h3>
+					<span class="phs-span">Cell：改变肠道菌群和肠道间的共生关系或可延长机体寿命</span>
+				</div>
+				<div class="slide"><a href="file:///E:/workspace/html/Web2/zuoye/Web%E5%A4%A7%E4%BD%9C%E4%B8%9A/sss.html"><img src="images/sw4.png" alt=""></a></div>
+				<div class="slidee">
+					<p class="phs-p">生物·医学</p>
+					<h3 class="phs-h1">造血干细胞的人工骨髓</h3>
+					<span class="phs-span">Biomaterials：科学家成功开发出用于再生造血干细胞的人工骨髓</span>
+				</div>
+				<div class="slide"><a href="file:///E:/workspace/html/Web2/zuoye/Web%E5%A4%A7%E4%BD%9C%E4%B8%9A/sss5.html"><img src="images/sw5.png" alt=""></a></div>
+				<div class="slidee">
+					<p class="phs-p">生物·医学</p>
+					<h3 class="phs-h1">“返老还童”</h3>
+					<span class="phs-span">Nat Med：新干细胞技术让小鼠“返老还童”</span>
+				</div>
+				<div class="slide"><a href="file:///E:/workspace/html/Web2/zuoye/Web%E5%A4%A7%E4%BD%9C%E4%B8%9A/sss3.html"><img src="images/sw1.png" alt=""></a></div>
+				<div class="slidee">
+					<p class="phs-p">生物·医学</p>
+					<h3 class="phs-h1">胰腺β细胞</h3>
+					<span class="phs-span">Cell Stem Cell：科学家成功将皮肤细胞重编程为产生胰岛素的胰腺β细胞</span>
+				</div>
+			</div>
+		<span id="left"><</span>
+		<span id="right">></span>
+		<ul class="nav" id="nav">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		</div>
+		<div id="shower" style="width: 1100px;height: 632px;">
+			<div id="shower-left">
+				<ul>
+					<li>
+						<img src="images/sw11.png">
+						<a href="http://www.bio360.net/media/114383"><h5>TED 演讲：脑科学—揭秘男女思考的秘密</h5></a>
+						<span>2019-12-25</span>
+					</li>
+					<li>
+						<img src="images/sw12.png">
+						<a href="http://www.bio360.net/media/150643"><h5>Merry CRISPR，送给喜爱生物的你</h5></a>
+						<span>2019-12-25</span>
+					</li>
+					<li>
+						<img src="images/sw13.png">
+						<a href="http://www.bio360.net/media/114380#ad-image-0"><h5>靶向基因</h5></a>
+						<span>2019-12-25</span>
+						<dd>天哪，我们被瞄准了！</dd>
+					</li>
+					<li>
+						<img src="images/sw14.png">
+						<a href="http://www.bio360.net/media/114379#ad-image-0"><h5>博士后铲屎官</h5></a>
+						<span>2019-12-25</span>
+						<dd>嘿！博士后铲屎官，快来打扫我的房子！</dd>
+					</li>
+					<li>
+						<img src="images/sw15.png">
+						<a href="http://www.bio360.net/media/114382#ad-image-0"><h5>薛定谔的导师</h5></a>
+						<span>2019-12-25</span>
+					</li>
+					<li>
+						<img src="images/sw16.png">
+						<a href="http://www.bio360.net/media/114381#ad-image-0"><h5>审稿</h5></a>
+						<span>2019-12-25</span>
+						<dd>如果我被拒了怎么办？</dd>
+					</li>
+					<li>
+						<img src="images/sw17.png">
+						<a href="http://www.bio360.net/media/114377#ad-image-0"><h5>DNA 突变</h5></a>
+						<span>2019-12-25</span>
+						<dd>我们不完美，因为我们有突变。</dd>
+					</li>
+					<li>
+						<img src="images/sw18.png">
+						<a href="http://www.bio360.net/media/114378"><h5>TED 课堂：人为什么做梦</h5></a>
+						<span>2019-12-25</span>
+						<dd>关于人为什么会做梦，目前为止几大说法有：为了满足自己的愿望，为了记忆或遗忘一些东西...</dd>
+					</li>
+				</ul>
+			</div>
+			<div id="shower-right">
+				<div id="science">
+					<div id="science-top">最新研究</div>
+					<div id="science-cen"><img src="images/science.jpg"></div>
+					<ul id="science-bottom">
+						<li>Science 一周论文导读           2019/12/24</li>
+						<li>Science 一周论文导读           2019/12/24</li>
+						<li>Science 一周论文导读           2019/12/24</li>
+					</ul>
+				</div>
+				<div id="video">
+					<div id="video-text">视频</div>
+					<a href=""><img src="images/sw19.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="foot">
+		<div id="foot-center">
+			<div id="foot-left">
+				<div id="foot-left-left">Astronomy</div>
+				<ul>
+					<li>组员：</li>
+					<li>史恺伦</li>
+					<li>刘志伟</li>
+					<li>周双文</li>
+					<li>付焘</li>
+				</ul>
+			</div>
+			<div id="foot-right">
+				<ul>
+					<li>首页 | 天文•物理 | 材料•化学 | 历史•人文 | 生物•医学 | 信息•能源 | more>></li>
+					<li>这一行我也不知道写啥</li>
+					<li>Mail：ihsofaiofhaslslsakcsklch.co    QQ：020-000000</li>
+					<li>地址：河北省石家庄市河北师范大学诚朴园3号楼205</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+ 	
+<script>
+		var box = document.getElementById("box");
+  		var oNavlist = document.getElementById("nav").children;
+  		var slider = document.getElementById("slider");
+  		var left = document.getElementById("left");
+  		var right = document.getElementById("right");
+  		var index = 1;
+  		var timer;
+  		var isMoving = false;
+
+  		function next(){
+  			if(isMoving){
+  				return;
+  			}
+  			isMoving = true;
+  			index++;
+  			navChange();
+  			animate(slider,{left:-1100*index},function(){
+  				if(index ===6){
+  					slider.style.left = "-1100px";
+  					index = 1;
+  				}
+  				isMoving = false;
+  			});
+  		}
+
+  		function prev(){
+  			if(isMoving){
+  				return;
+  			}
+  			isMoving = true;
+  			index--;
+  			navChange();
+  			animate(slider,{left:-1100*index},function(){
+  				if(index ===0){
+  					slider.style.left = "-6000px";
+  					index = 5;
+  				}
+  				isMoving = false;
+  			});
+  		}
+
+  		var timer = setInterval(next,2000);
+
+  		box.onmouseover =function(){
+  			clearInterval(timer);
+  		}
+
+  		box.onmouseout = function(){
+  			timer = setInterval(next,3000);
+  		}
+
+  		right.onclick =next;
+  		left.onclick = prev;
+
+  		for(var i=0;i<oNavlist.length;i++){
+  			oNavlist[i].idx = i;
+  			oNavlist[i].onclick = function(){
+  				index = this.idx +1;
+  				navChange();
+  				animate(slider,{left:-1100*index});
+  			}
+  		}
+
+  		function navChange(){
+  			for(var i=0;i<oNavlist.length;i++){
+  				oNavlist[i].className = "";
+  			}
+  			if(index===6){
+  				oNavlist[0].className = "active";
+  			}else if(index===0){
+  				oNavlist[4].className ="active";
+  			}else{
+  				oNavlist[index-1].className = "active";
+  			}
+  		}
+</script>
+<script type="text/javascript" src="animate.js"></script>
+</body>
+</html>

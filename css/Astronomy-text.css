@@ -1,0 +1,113 @@
+#text{
+	width: 1100px;
+	margin: auto;
+	position: relative;
+	border: 2px solid #f7f7f7;
+}
+#shower-right{
+ 			width: 330px;
+ 			height: 632px;
+ 			position: absolute;
+ 			right: 0px;
+ 			top: 0px;
+ 		}
+ 		#science{
+ 			width: 298px;
+ 			height: 384px;
+ 			margin:0px 16px;
+ 			position: relative;
+ 			text-align: left;
+ 			background-color: #f7f7f7;
+ 		}
+ 		#science-top{
+ 			width: 298px;
+ 			height:30px;
+ 			position: absolute;
+ 			top: 10px;
+ 			left: 0px;
+ 			border-bottom: 1px  solid black;
+ 		}
+ 		#science-cen{
+ 			width: 298px;
+ 			height: 200px;
+ 			position: absolute;
+ 			top: 50px;
+ 			left: 9px;
+ 		}
+ 		#science-bottom{
+ 			width: 298px;
+ 			height: 120px;
+ 			position: absolute;
+ 			bottom: 0px;
+ 		}
+ 		#science-bottom>li{
+ 			width: 298px;
+ 			height: 30px;
+ 			float: left;
+ 			margin-bottom:10px;
+ 			text-align: center;
+ 			color: #666666;
+ 			font-size: 14px;
+ 			border-bottom: 1px  dashed #666666;
+ 		}
+ 		#video{
+ 			width: 248px;
+ 			height: 138px;
+ 			position: absolute;
+ 			left: 41px;
+ 			bottom: 60px;
+ 		}
+ 		#video-text{
+ 			width: 248px;
+ 			height: 36px;
+ 			position: absolute;
+ 			top: -40px;
+ 			border-bottom: 1px solid black;
+ 		}
+
+ #navtwo{
+ 	width: 100%;
+ 	height: 40px;
+ 	position: relative;
+ 	background-color: #fafafa;
+ }
+ #navtwo-wai{
+ 	width: 1100px;
+ 	height: 30px;
+ 	margin:auto;
+ 	position: relative;
+ 	padding-top: 10px;
+ 	color: #989898;
+ 	font-size: 14px;
+ }
+ a{
+ 	text-decoration: none;
+ }
+ #navtwo-text>a>span{
+ 	color: #989898;
+ 	font-size: 14px;
+ }
+ #text-left{
+ 	width: 690px;
+ 	position: relative;
+ 	text-align: center;
+ 	padding: 30px;
+ }
+ #text-left>h2{
+ 	padding-top: 30px;
+ 	margin: auto;
+ }
+  #text-left>img{
+  	margin: auto;
+  }
+  #infor{
+  	margin: auto;
+  	margin-top: 10px;
+  	color: #989898;
+ 	font-size: 14px;
+  }
+   #text-left>p{
+	text-align: left;
+	margin-bottom: 10px;
+	margin-top: 10px;
+   }

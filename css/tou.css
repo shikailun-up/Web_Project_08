@@ -1,0 +1,77 @@
+*{
+  			padding: 0;
+  			margin: 0;
+  			}
+  		ul,li{
+  			list-style: none;
+  		}
+  		a:visited {
+  			color: black;
+  		}
+
+  		#all{
+			width: 1100px;
+			height:200px;
+			margin: auto;
+			position: relative;
+		}
+		#navone{
+			width: 1100px;
+			height:200px;
+			position: relative;
+		}
+
+#d1{
+        width: 1100px;
+        height: 150px;
+        position: absolute;
+        top: 0px;
+      }
+      #d1-1{
+    height:130px;
+    width:230px;
+    float:left;
+    margin-top:20px;
+    }
+    #d1-2{
+      height:50px;
+      width:300px;
+      float:left;
+      margin-top:100px;
+    }
+    #d1-3{
+      height:150px;
+      width:400px;
+      float:right;
+    }
+    #d2{
+        width: 1100px;
+        height: 50px;
+        background-color:black;
+        position: absolute;
+        bottom: 0px;
+      }
+      #d2>ul{
+        width: 1100px;
+        height: 50px;
+        position: relative;
+      }
+      #d2>ul>li{
+        width: 137px;
+        height: 37px;
+        color: #fff;
+        float: left;
+        margin-right: 20px;
+        text-align: center;
+        padding-top: 13px;
+      }
+      #d2>ul>li>a{
+        color: white;
+        text-decoration: none;
+      }
+      #d2>ul>li:hover{
+      background-color: rgb(2,178,181);
+    }
+    #Astronomy{
+      background-color: rgb(2,178,181);
+    }

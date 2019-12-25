@@ -1,0 +1,53 @@
+#foot{
+ 			width: 100%;
+ 			height: 138px;
+ 			background-color: #e8e8e8;
+ 			position: relative;
+ 			padding: 60px 0px 50px;
+ 		}
+ 		#foot-center{
+ 			width: 1100px;
+ 			height: 138px;
+ 			margin:auto;
+ 			position: relative;
+ 		}
+ 		#foot-left{
+ 			width: 400px;
+ 			height: 138px;
+ 			position: absolute;
+ 			top: 0px;
+ 			left: 0px;
+ 			border-right: 1px solid #c8c8c8;
+ 		}
+ 		#foot-left-left{
+ 			width: 140;
+ 			height: 32px;
+ 			color: rgb(7, 108, 224);
+ 			font-size: 32px;
+ 			font-weight: bold;
+ 		}
+ 		#foot-left>ul{
+ 			width: 156px;
+ 			height: 115px;
+ 			position: absolute;
+ 			right: 0px;
+ 			top: 0px;
+ 			color: #a9a9a9;
+ 		}
+ 		#foot-left>ul>li{
+ 			width: 156px;
+ 			height: 15px;
+ 			margin-top: 8px;
+ 		}
+ 		#foot-right{
+ 			width: 600px;
+ 			height: 138px;
+ 			position: absolute;
+ 			right: 100px;
+ 			top: 0px;
+ 			text-align: right;
+ 			color: #a9a9a9;
+ 		}
+ 		#foot-right>ul>li{
+ 			padding-bottom: 10px;
+ 		}
