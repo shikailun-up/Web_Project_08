@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>信息能源</title>
+	<style type="text/css">
+		body{background-color: #F0F0F0;}
+		#logo{
+			width: 70PX;
+			height: 60PX;
+		}
+		#textlogo{
+			position:relative;
+			left: 400px;
+			bottom: 80px;
+		}
+		#wenzi2{
+			position: relative;
+			left: 800px;
+			bottom: 120px;
+		}
+		#d2{
+  			width: 1100px;
+  			height: 65px;
+  			background-color:black;
+  			position: absolute;
+  			top:100px;
+  			left: 200px;
+  		}
+  		#d2>ul{
+  			width: 1100px;
+  			height: 50px;
+  			position: relative;
+  		}
+  		#d2>ul>li{
+  			width: 100px;
+  			height: 50px;
+  			color: #fff;
+  			float: left;
+  			margin-right: 20px;
+  			margin-top: -15px;
+  			text-align: center;
+  			padding-top: 13px;
+  			background-color: black;
+  		}
+  		#d2>ul>li:hover{
+ 			background-color: rgb(2,178,181);
+ 		}
+		#webTitle{
+			width: 100px;
+			height:230px;
+			background-color: #FFFFFF;
+			border:solid #AAAAAA 1px;
+
+			position: fixed;
+			top: 200px;
+			left: -80px;
+		}
+		.contain{
+			background-color: #FFFFFF;
+			border: solid #d0d0d0 1px;
+			width:900px;
+			height:160px;
+			float:left;
+			margin-left:290px;	
+			margin-top: 20px;
+			color: black;
+		}
+		.contain:hover{
+			border: solid #00FFFF 1px;
+			background-color: #d0d0d0;
+		}
+		.contain div{
+			float: 	left;	
+		}
+		.contain div img{height:160px;
+			            width:300px;}
+		.texts{width: 600px;
+			height: 160px;
+			overflow: hidden;}
+
+		#showbox{width: 900px;
+			height: 380px;
+			border:1px solid red;
+			margin:0px auto;
+			position: relative;
+			top:150px;
+			overflow: hidden;
+			cursor: pointer;}
+		#slider{width: 8400px;
+				position: absolute;
+				left: -1200px;
+				}
+		.imgdiv{width: 1200px;
+			float: left;
+		}
+		.imgdiv img{
+			width: 900px;
+			height: 380px;
+		}
+		#left{width: 25px;
+			height: 40px;
+			float:left;
+			position: relative;
+			top: 150px;
+			left: 70px;
+			border:1px;
+			opacity: 0;
+			text-align: center;
+			line-height: 40px;
+			background-color:red;}
+		#right{float: left;
+			position:relative;
+			top:150px;
+			left: 750px;
+			width: 25px;
+			height: 40px;
+			border:1px;
+			opacity: 0;
+			text-align: center;
+			line-height: 40px;
+			background-color:red;}
+		#anniu{
+			float: left;
+			position:relative;
+			top: 330px;
+			left: 650px;
+			}
+		li{float: left;
+			margin-left: 18px;
+			background-color: #ccc;
+			cursor: pointer;
+		}
+		#anniu .active{color:red;
+						opacity: 0.5;
+						}
+		#headbox{background-color: #ADADAD;
+				position: relative;
+				top: 50px;
+			    left: 0px;}
+		#headbox img{position: relative;
+					left: 200px;
+					bottom:0px;}
+		#headchooes{
+			margin-right: 0px;
+		}
+		
+		.chooes{
+			background-color:#AAAAAA;
+			color: #ffffff;
+			border:solid black 1px;
+			float:right;
+			margin-top: 0px;
+			margin-right: 0px;
+			width: 67px;
+			height: 44px;
+			text-align:center;
+		}
+		.chooes:hover{background-color:rgb(2,178,181);}
+		#mark{
+			height:230px;
+			width:30px;
+			float: right;
+			text-align: center;
+			line-height: 100px;
+			background-color: #000000;
+			color: #ffffff;
+		}
+		.imginfo{float:left;
+				margin-bottom: 0px;
+				margin-left: 10px;
+				width:900px;
+				height: 150px;
+				background-color: red;
+				}
+		#backtop{
+			position: fixed;
+			top: 350px;
+			right: 20px;
+			display: none; /* 默认隐藏 */
+		}
+		#ma{
+			position: fixed;
+			top: 300px;
+			right: 40px;
+		}
+		#turema{
+			width:150px;
+			height: 150px;
+			position: fixed;
+			top: 100px;
+			right: 20px;
+			text-align: center;
+			font-size: 16px;
+			display:none;       /* 默认隐藏 */
+		}
+		#turema #mean{
+			background-color:rgb(2,178,181);
+			color: #ffff;
+			height: 40px;
+			line-height: 40px;
+
+		}
+		#turema #maimg img{
+			position: relative;
+			right: 20px;
+			bottom: 10px;
+				}
+		#botdiv{width:1200px;
+			height: 150px;
+			background-color: #444444;
+			position:absolute;
+			top: 1900px;
+			left: 150px;
+			text-align: center;
+			 }
+
+		#botdiv ul{
+			position: relative;
+			left: 450px;
+			top: 50px;
+
+		}
+		#botdiv ul li{float: left;
+			list-style-type: none;
+			background-color: #4444;
+			color: #DDDD;
+			font-size: 10px;
+					}
+		#otherimfo ul{
+			position: relative;
+			top: 90px;
+			left: 100px;
+		}
+		#otherimfo ul li{
+			float: left;
+			list-style-type: none;
+			background-color: #4444;
+			color: #DDDD;
+			font-size: 10px;
+		}
+		#liebiao{
+			position:relative;
+			top: 160px;
+			right: 900px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div>
+			<div id="logo">
+				<img src="ABUIABACGAAgyoDs7wUoiqfKkgYw-wc4mAY.jpg"/ style="width:200px;height:60px;">
+				<img src="logo.png"/ id="textlogo">
+				<img src="wenzi2.png"/ id="wenzi2">
+			</div>
+			<div id="d2">
+					<ul>
+						<li>首页</li>
+						<li>天文·物理</li>
+						<li id="Astronomy">材料·化学</li>
+						<li>历史·人文</li>
+						<li>生物·医学</li>
+						<li>信息·能源</li>
+						<li>More>></li>
+					</ul>
+				</div>
+			<div id="webTitle">
+
+				<div id="headchooes">
+					<div id="mark">返回</div>
+					<a href="#"><div class="chooes">首页</div></a>
+					<a href="#"><div class="chooes">天文*地理</div></a>
+					<a href="#"><div class="chooes">材料*化学</div></a>
+					<a href="#"><div class="chooes">历史*人文</div></a>
+					<a href="#"><div class="chooes">生物*医学</div></a>
+				</div>
+				<div id="hand">
+					<div id="turema">
+						<div id="mean">扫码添加刘志伟微信</div>
+						<dir id="maimg"><img src="1567429801737_259.jpg"/></dir>
+					</div>
+					<div id="backtop">
+						<img src="top.png">
+					</div>
+					<div id="ma">
+						<img src="ma.png"/>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="box"id="showbox">
+			<div class="slider"id="slider">
+				<div class="imgdiv"><div class="imginfo"></div><img src="./能源文章3/2019120614254076848.jpg"/></div>		
+				<div class="imgdiv"><img src="./能源文章2/2019121112062545594.jpg"/><</div>
+				<div class="imgdiv"><img src="./能源文章1/2019121612044374746.jpg"/></div>
+				<div class="imgdiv"><img src="./能源文章4/2019122316525054068.jpg"/></div>
+				<div class="imgdiv"><img src="./能源文章5/2019122311494345683.jpg"/></div>
+				<div class="imgdiv"><img src="./信息文章6/2019120217295399353.jpg"/></div>
+				<div class="imgdiv"><img src="./信息文章7/2019121718315752284.jpg"/></div>
+			</div>
+			<span id="left"><</span>
+			<span id="right">></span>
+			<ul id="anniu">
+				<li class="active" id="active"></li>
+				<li class="l"></li>
+				<li class="l"></li>
+				<li class="l"></li>
+				<li class="l"></li>
+			</ul>
+		</div>
+		<img src="列表浏览1.png"id="liebiao">
+		<a href="http://news.cctv.com/2019/12/02/ARTIbWza9guS4uZkLzP13FKO191202.shtml?spm=C94212.PGZDd8bkBJCZ.E850fz1ryIUd.1869">
+			<div class="contain" style="margin-top: 200px;">
+				<div><img src="./信息文章6/2019120217295399353.jpg"/></div>
+				<div class="texts">
+					<p>“区块链+城市大脑”下城平台试点在杭州启动
+		                区块链服务网络助力社会治理和城市大脑下城平台试点在杭州正式启动。该试点将结合区块链服务网络和城市大脑技术优势，探索更高效、透明、可信的政府服务。
+		　               这是记者从1日在浙江省杭州市召开的首届区块链服务网络合作伙伴大会上获悉的.
+					</p>
+				</div>
+			</div>
+		</a>
+		<a href="http://news.cctv.com/2019/12/06/ARTIjSKr4YINBlToL9w9JAD9191206.shtml?spm=C94212.PGZDd8bkBJCZ.E850fz1ryIUd.1538">
+			<div class="contain">
+				<div><img src="./信息文章5/2019120612150393917.jpg"/></div>
+				<div class="texts">
+								<p>5G“大爆炸”：亦真亦幻　潜能无限
+
+					原标题：5G“大爆炸”：亦真亦幻　潜能无限
+
+
+					　　世界5G大会主题展期间，参观者在体验5G远程驾驶。
+
+					　　从1G到5G发展变化示意图。
+
+					　　5G——第五代移动通信系统的简称。
+
+					　　当5G时代向你走来，是否想过，你的工作生活将发生怎样翻天覆地的变化？
+
+		　
+					</p>
+				</div>
+			</div>
+		</a>
+		<a href="http://news.cctv.com/2019/12/06/ARTIjSKr4YINBlToL9w9JAD9191206.shtml?spm=C94212.PGZDd8bkBJCZ.E850fz1ryIUd.1538">
+			<div class="contain">
+				<div><img src="./信息文章4/2019121018315018710.jpg"/></div>
+				<div class="texts">
+					<p>近日，微软宣布，将于2020年1月14日起停止对Windows 7的支持，并建议用户更新至Windows 10系统。
+
+					　　在官网一则简短的声明中，微软称：“2020年1月14日之后，微软将不再为安装Windows 7的电脑提供安全升级或支持。
+
+					　　Windows 7于2009年10月正式发布，迄今已有十年。
+					</p>
+				</div>
+			</div>
+		</a>
+		<a href="http://news.cctv.com/2019/12/12/ARTIhiapPzKzAYcpaLeeXPfc191212.shtml?spm=C94212.PGZDd8bkBJCZ.E850fz1ryIUd.813">
+			<div class="contain">
+				<div><img src="./信息文章3/2019121217193432390.jpg"/></div>
+				<div class="texts">
+					<p>　在手机App中植入安全漏洞，再通过电脑端软件操作，只需几秒钟，工作人员便可控制“千里之外”的手机摄像头、扬声器进行偷拍、窃听，一场现实版“窃听风云”在2019年网络安全宣传周上的网络安全博览会互动体验专区中上演。
+					</p>
+				</div>
+			</div>
+		</a>
+		<a href="http://news.cctv.com/2019/12/16/ARTIjbIlpGWtwZradNnLXA5R191216.shtml?spm=C94212.PGZDd8bkBJCZ.E850fz1ryIUd.563">
+			<div class="contain">
+				<div><img src="./信息文章2/2019121610195887491.jpg"/></div>
+				<div class="texts">
+					<p>人脸识别应用还没那么“美
+					近年来，人工智能应用逐渐落地，其中又以人脸识别最为典型。然而，人脸识别应用到具体场景中，仍存在不少问题。南都个人信息保护研究中心人工智能伦理课题组对此进行了调查，并于近日发布调查成果报告《人脸识别落地场景观察报告（2019）》，总结了人脸识别应用的常见问题，并提出了解决建议。
+					</p>
+				</div>
+			</div>
+		</a>
+		<a href="http://news.cctv.com/2019/12/20/ARTIstV5ToJJbwM2fydFeDnZ191220.shtml?spm=C94212.PGZDd8bkBJCZ.E850fz1ryIUd.228">
+			<div class="contain">
+				<div><img src="./信息文章1/2019122013594682189.jpg"/></div>
+				<div class="texts">
+					<p>人工智能继续迭代 类脑计算悄然走红
+		　             世界5G大会主题展期间，参观者在体验5G远程驾驶。在官网一则简短的声明中，微软称：“2020年1月14日之后，微软将不再为安装Windows深度学习正遍地开花，但它可能并 
+		                  非人工智能的终极方案。
+					</p>
+				</div>
+			</div>
+		</a>
+		<a href="http://news.cctv.com/2019/12/06/ARTIurRK00oGkwaLJz5PWp1U191206.shtml?spm=C94212.PGZDd8bkBJCZ.E850fz1ryIUd.1486">
+			<div class="contain">
+				<div><img src="./能源文章3/2019120614254076848.jpg"/></div>
+				<div class="texts">
+					<p>电池革命如何重新“定义”汽车?
+				             以“电池革命如何重新‘定义’汽车”为主题的“科学麻辣烫”第四期活动在北京举行
+				    </p>
+				</div>
+			</div>
+		</a>
+		<div id="botdiv">
+			<ul>
+				<li>制作人：周双文</li>
+				<li>年级：2018级</li>
+				<li>班级：软件工程2班</li>
+
+			</ul>
+			<div id="otherimfo">
+			<ul>
+				<li>违反和不良信息举报电话：010-8847123</li>
+				<li style="position: relative;bottom: 5px;"><img src="1547690093181_865.png"/>京公网安 100000000100255号[2019] 0305-1212</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var box=document.getElementById('showbox');
+    	var slider=document.getElementById('slider');
+    	var imgs=document.getElementsByClassName('imgdiv');
+    	var anniulist=document.getElementsByTagName('li');
+    	var anniu=document.getElementById('anniu');
+    	var left=document.getElementById('left');
+    	var right=document.getElementById('right');
+    	var	neck=document.getElementById('neck');
+    	var textcontain=document.getElementById('textcontain');
+    	var index=1;
+    	var isMoving=false;
+    	var num=0;
+    	var backtop=document.getElementById('backtop');
+    	// 当网页向下滑动 20px 出现"返回顶部" 按钮
+	window.onscroll = function() {scrollFunction()};
+	 
+	function scrollFunction() {console.log(121);
+	    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	        document.getElementById("backtop").style.display = "block";
+	    } else {
+	        document.getElementById("backtop").style.display = "none";
+	    }
+	}
+	 
+	backtop.onclick=function(){
+		topFunction();
+	}
+		// 点击按钮，返回顶部
+	function topFunction() {
+	    document.body.scrollTop = 0;
+	    document.documentElement.scrollTop = 0;
+	}
+		function textmove(){
+			num++
+			if(num>=80){
+				textcontain.style.right="-100px";
+				num=0;
+			}
+			animate(textcontain,{right:10*num})
+		}
+		var pmove=setInterval(textmove,200);
+		right.onclick=function(){
+			
+			next();}
+		left.onclick=function(){
+			console.log(index);
+			prev();}
+		function next(){
+			if (isMoving){
+				
+				return;
+			}
+			isMoving=true;
+			index++;
+			navchange();
+
+			animate(slider,{left:-1200*index},function(){
+				if(index>5){
+					
+					slider.style.left="-1200px";
+					index=1;
+				}
+				isMoving=false;
+			});
+			
+			console.log(index);
+			
+		}
+		
+		function prev(){
+			if(isMoving){
+				console.log("执行这里");
+				return;
+			}
+			isMoving=true;
+			index--;
+
+			navchange();
+			
+			animate(slider,{left:-1200*index},function(){
+				if(index===0){
+				
+					slider.style.left="-6000px";
+					index=5;
+				}
+				isMoving=false;
+			});
+			
+			
+		}
+		var timer=setInterval(next,2000);
+		function getStyle(obj, attr){
+			if(obj.currentStyle){
+				return obj.currentStyle[attr];
+			} else {
+				return getComputedStyle(obj, null)[attr];
+			}
+		}
+		box.onmouseover=function(){
+
+			animate(left,{opacity:50});
+			animate(right,{opacity:50});
+			clearInterval(timer);
+			console.log(isMoving);
+
+		}
+		box.onmouseout=function(){
+			animate(left,{opacity:0});
+			animate(right,{opacity:0});
+			timer=setInterval(next,2000);
+			
+        }
+		
+		
+		for (var i = 0; i < anniulist.length; i++) {
+			anniulist[i].idx=i;
+
+			anniulist[i].onclick=function(){
+				index=this.idx+1;
+				navchange();
+				
+				animate(slider,{left:-1200*index});
+			}
+		}
+		function navchange(){
+			for (var i = 0;i < anniulist.length; i++) {
+				anniulist[i].className="";
+
+			}
+			if(index>5){
+				anniulist[0].className='';
+			}else if(index===0){
+				anniulist[4].className="active";
+			}else{
+				anniulist[index-1].className="active";
+			}
+		}
+		function animate(obj,json,callback){
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+				var isStop = true;
+				for(var attr in json){
+					var now = 0;
+					if(attr == 'opacity'){
+						now = parseInt(getStyle(obj,attr)*100);
+					}else{
+						now = parseInt(getStyle(obj,attr));
+					}
+					var speed = (json[attr] - now) / 8;
+					speed = speed>0?Math.ceil(speed):Math.floor(speed);
+					var cur = now + speed;
+					if(attr == 'opacity'){
+						obj.style[attr] = cur / 100;
+					}else{
+						obj.style[attr] = cur + 'px';
+					}
+					if(json[attr] !== cur){
+						isStop = false;
+					}
+				}
+				if(isStop){
+					clearInterval(obj.timer);
+					callback&&callback();
+				}
+			}, 30)
+		}
+	var webTitle=document.getElementById('webTitle');
+	webTitle.onmouseover=function(){
+		webTitle.style.left="0px";
+	}
+	webTitle.onmouseout=function(){
+		webTitle.style.left="-80px";
+	}
+	var ma=document.getElementById('ma');
+	ma.onmouseover=function(){
+		document.getElementById('turema').style.display="block";
+	}
+	ma.onmouseout=function(){
+		document.getElementById('turema').style.display="none";
+	}
+</script>
+</html>
