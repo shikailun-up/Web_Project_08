@@ -20,6 +20,12 @@
 			height:200px;
 			position: relative;
 		}
+.pp{
+	color:white;
+}
+a{
+	text-decoration: none;
+}
 
 #d1{
         width: 1100px;
