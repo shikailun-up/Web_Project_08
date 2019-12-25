@@ -1,7 +1,12 @@
 body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
 
-	#box1{width:750px;height:400px;position:relative; margin:100px auto;border: 1px solid black;}
+	#box1{width:750px;height:400px;position:relative; margin:auto;}
 	#img1{width:300px;height:300px;position:absolute;left:0;top:0;}
 	#slider{width:150px;height:150px;position:absolute;left:0;top:0;background:#CCC;opacity:0.4;cursor: move;display:none; filter:alpha(opacity=40);}
 	#img2{position:absolute;right:0;top:0;display:none; width:400px;height:400px;overflow:hidden;}
 	#Bimg{position:absolute;left:0;top:0;}
+	#alloncli{width: 100%;height: 50px;position: relative;}
+	#alloncli-in{width: 1100px;height: 50px;margin:auto;position: relative; }
+	#oncli{width: 750px;height: 50px;position: absolute;left: 0px;top:0px;}
+	#oncli>button{width: 75px;height: 10px;padding: 15px 25px;float: left;text-align: center;margin-left: 25px;}
+	
